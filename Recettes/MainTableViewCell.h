@@ -14,11 +14,10 @@
 }
 
 @property (nonatomic, retain) UIImageView   * recipeImageView;
-@property (nonatomic, retain) UILabel       * recipeTitleLabel;
+@property (nonatomic, retain) UITextView    * recipeTitleLabel;
 @property (nonatomic, retain) UILabel       * recipeTotalTimeLabel;
 
 @property (nonatomic, retain) UIView        * darkSelectedView;
-@property (nonatomic, assign) BOOL            wasDragged;
 
 @property (nonatomic, retain) UIView        * underCover;
 @property (nonatomic, retain) UIView        * cover;

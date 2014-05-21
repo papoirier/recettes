@@ -149,44 +149,6 @@ float totalHeight;
 - (void)loadTotalTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
     [self timeTextWithRegularString:@"total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:WIDTH/2 andYPostition:imageHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
-    /*
-    NSString * str = [[NSString stringWithFormat:@"Temps total"] uppercaseString];
-    NSMutableAttributedString * totalTimeSubtitle = [[NSMutableAttributedString alloc] initWithString:str];
-    [totalTimeSubtitle addAttribute:NSKernAttributeName
-                             value:@(1.4)
-                             range:NSMakeRange(0, totalTimeSubtitle.length)];
-    
-    CGRect totalTimeSubtitleRect = CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition, rectWidth - (PADDING_LABEL*2), rectHeight*(0.5f));
-    UILabel * totalTimeSubtitleLabel = [[UILabel alloc] initWithFrame:totalTimeSubtitleRect];
-    //totalTimeSubtitleLabel.backgroundColor = [UIColor grayColor]; // -------------
-    totalTimeSubtitleLabel.textColor = [UIColor grayColor];
-    totalTimeSubtitleLabel.font = BROWN_BOLD_12;
-    totalTimeSubtitleLabel.attributedText = totalTimeSubtitle;
-    totalTimeSubtitleLabel.numberOfLines = 0;
-    [totalTimeSubtitleLabel sizeToFit];
-    [scrollView addSubview:totalTimeSubtitleLabel];
-    
-    // bottom rule -----------------------------
-    UIView * shell = [[UIView alloc] initWithFrame:totalTimeSubtitleRect];
-    shell.backgroundColor = [UIColor clearColor];
-    [scrollView addSubview:shell];
-    
-    CALayer * bottomBorder = [CALayer layer];
-    bottomBorder.frame = CGRectMake(0, rectHeight*(0.5f), rectWidth - PADDING_LABEL*2, 1.0f);
-    bottomBorder.backgroundColor = [UIColor grayColor].CGColor;
-    [shell.layer addSublayer:bottomBorder];
-    // ------------------------------------------
-    
-    NSString * totalTime = [detail objectForKey:@"totalTime"];
-    UILabel * totalTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition  + rectHeight*(0.5f), rectWidth - (PADDING_LABEL*2), rectHeight*(0.5f))];
-    totalTimeLabel.text = [NSString stringWithFormat:@"%@ minutes", totalTime];
-    //totalTimeLabel.backgroundColor = [UIColor greenColor]; // -------------
-    totalTimeLabel.textColor = [UIColor grayColor];
-    totalTimeLabel.font = BROWN_18;
-    
-    
-    [scrollView addSubview:totalTimeLabel];
-     */
 }
 
 // -----------------------------------------------------------------------

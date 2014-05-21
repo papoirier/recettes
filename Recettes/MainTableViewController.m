@@ -217,8 +217,17 @@
         
         MainTableViewCell * cell = (MainTableViewCell*)[self.tableView cellForRowAtIndexPath:sourceIndex];
         if(cell) {
+            /*
             cell.layer.borderColor = [UIColor redColor].CGColor;
             cell.layer.borderWidth = 1;
+             */
+            shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds];
+            cell.layer.masksToBounds = NO;
+            cell.layer.shadowColor = [UIColor blueColor].CGColor;
+            cell.layer.shadowOffset = CGSizeMake(0, 0);
+            cell.layer.shadowRadius = 20.0;
+            cell.layer.shadowOpacity = 0.8;
+            cell.layer.shadowPath = shadowPath.CGPath;
         }
         
     }
@@ -251,8 +260,11 @@
         NSLog(@"ended");
         MainTableViewCell * cell = (MainTableViewCell*)[self.tableView cellForRowAtIndexPath:sourceIndex];
         if(cell) {
-            cell.layer.borderColor = [UIColor redColor].CGColor;
-            cell.layer.borderWidth = 0;
+            shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds];
+            cell.layer.masksToBounds = NO;
+
+            cell.layer.shadowOpacity = 0;
+            cell.layer.shadowPath = shadowPath.CGPath;
         }
         [self saveData];
     }

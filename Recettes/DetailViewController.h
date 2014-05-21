@@ -12,8 +12,8 @@
 {
     NSDictionary * regFont;
     NSDictionary * boldFont;
-    UITextView * prepTimeTextView;
-    UITextView * totalTimeTextView;
+    UITextView   * prepTimeTextView;
+    UITextView   * totalTimeTextView;
 }
 
 @property (nonatomic, weak) NSDictionary    * detail;

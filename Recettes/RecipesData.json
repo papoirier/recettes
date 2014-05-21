@@ -52,6 +52,7 @@
                           ],
                 "source": "http://smittenkitchen.com/blog/2013/07/one-pan-farro-with-tomatoes/"
                 },
+
                 {
                 "title": "Calmars 2 minutes, style sauveteur sicilien",
                 "shortTitle": "Calmars 2 minutes",
@@ -106,6 +107,24 @@
                         "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
                           ],
                 "source": "http://www.aveceric.com/twominute-calamari-sicilian-lifeguard-style/"
+                },
+
+                {
+                "title": "Tarte aux pommes de Monsieur Pépin",
+                "shortTitle": "Tarte aux pommes",
+                "author": "Jacques Pépin",
+                "image": "apple-pie.png",
+                "prepTime": "20",
+                "totalTime": "70",
+                "ingredients": [
+                                "1",
+                                "2"
+                ],
+                "steps": [
+                        "etape 1",
+                        "etape 2"
+                          ],
+                "source": "http://www.saveur.com/article/Recipes/Mamans-Apple-Tart"
                 }
                 ]
 }

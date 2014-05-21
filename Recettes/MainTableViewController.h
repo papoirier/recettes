@@ -16,6 +16,7 @@
     MainTableViewCell * cellRef;
     
     NSIndexPath * sourceIndex;
+    UIBezierPath * shadowPath;
 }
 
 @property (nonatomic, retain) NSMutableArray               * data;
