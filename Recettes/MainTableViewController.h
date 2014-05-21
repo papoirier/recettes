@@ -1,0 +1,25 @@
+//
+//  MainTableViewController.h
+//  Recettes
+//
+//  Created by Pierre-Alexandre Poirier on 5/5/14.
+//  Copyright (c) 2014 Pierre-Alexandre Poirier. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "MainTableViewCell.h"
+
+@interface MainTableViewController : UITableViewController {
+    UIImageView       * navBarHairlineImageView;
+    CGPoint             offset;
+    CGPoint             longOffset;
+    MainTableViewCell * cellRef;
+    
+    NSIndexPath * sourceIndex;
+}
+
+@property (nonatomic, retain) NSMutableArray               * data;
+@property (nonatomic, retain) UIPanGestureRecognizer       * pan;
+@property (nonatomic, retain) UILongPressGestureRecognizer * longPress;
+
+@end

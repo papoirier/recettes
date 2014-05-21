@@ -1,0 +1,111 @@
+{
+    "recipes": [
+                {
+                "title": "Lotte rôtie avec ragoût d’asperges et champignons",
+                "shortTitle": "Lotte rôtie",
+                "author": "Éric Ripert",
+                "image": "monkfish.png",
+                "prepTime": "30",
+                "totalTime": "45",
+                "ingredients": [
+                                "0,5 kg (1 lb) de lotte",
+                                "Piment chipotle en poudre",
+                                "470 g (2 tasses) de champignons crimini, coupés en dés",
+                                "Ail, émincé",
+                                "30 g (2 c. à table) d’échalotte, émincée",
+                                "50 ml (2 c. à table) de bouillon de légumes",
+                                "8 asperges, tranchées en biais",
+                                "120 g (½ tasse) de gourganes",
+                                "Persil, haché"
+                                ],
+                "steps": [
+                          "Préchauffer le four à 230˚C (450˚F). À feu élevé, faire chauffer l’huile dans une poêle anti-adhésive qui va au four. Déposer le filet dans la poêle et faire sauter pendant environ 5 minutes, jusqu’à ce que le dessous poisson soit bien doré. Tourner le poisson et faire cuire au four pour une durée d’environ 8 minutes (ou jusqu’à temps que le centre du poisson soit chaud).",
+                          "À feu moyen, mettre dans une casserole de l’huile d’olive, les champignons et le piment chipotle. Couvrir et faire cuire environ 4 minutes. Ajouter l’ail, l’échalote et le bouillon de légumes. Réduire L’intensité du feu à doux puis cuire, à couvert fermé, environ 5 minutes en faisant attention de ne pas laisser le liquide s’évaporer.",
+                          "Ajouter les asperges, les gourganes et le persil. Cuire environ 2 minutes. Assaisonner avec sel et poivre. Retirer du feu. Faire pré-chauffer des assiettes.",
+                          "Transférer la lotte du four sur une planche à découper, puis laisser reposer 1-2 minutes. Couper le poisson en tranches de 2 cm d’épaisseur. Placer la lotte sur les assiettes puis déposer le ragoût de légumes autour. Servir immédiatement."
+                          ],
+                "source": "http://www.marthastewart.com/313594/erics-roast-monkfish-with-casserole-of-m"
+                },
+                {
+                "title": "Farro en une seule casserole",
+                "author": "Deb Perelman",
+                "image": "farro.png",
+                "prepTime": "10",
+                "totalTime": "40",
+                "ingredients": [
+                                "475 ml (2 tasses) d’eau",
+                                "175 g (1 tasse) de farro",
+                                "½ gros oignon, tranché finement",
+                                "2 gousses d’ail émincées",
+                                "255 g de tomates cerise",
+                                "Basilic en chiffonade",
+                                "Sel",
+                                "Piment concassé (soupçon facultatif)",
+                                "Huile d’olive",
+                                "Parmesan râpé"
+                                ],
+                "steps": [
+                          "Faire tremper le farro dans une casserole pour une vingtaine de minutes. Pendant ce temps, commencer la préparation des autres ingrédients.",
+                          "Couper le demi oignon en deux pour obtenir deux quarts, puis couper en fines tranches. Émincer l’ail. Couper les tomates en demies ou quarts. Ajouter le sel, de l’huile d’olive et le piment concassé. Ajouter tous ces ingrédients au dès qu’ils sont prêts à la casserole.",
+                          "Amener à ébullition. Lorsque le tout bout, réduire le feu puis continer la cuisson à découvert pour environ 30 minutes.",
+                          "Servir dans des bols. Ajouter un filet d’huile, la chiffonade de basilic et du parmesan râpé."
+                          ],
+                "source": "http://smittenkitchen.com/blog/2013/07/one-pan-farro-with-tomatoes/"
+                },
+                {
+                "title": "Calmars 2 minutes, style sauveteur sicilien",
+                "shortTitle": "Calmars 2 minutes",
+                "author": "Mario Batali",
+                "image": "calamari.png",
+                "prepTime": "10",
+                "totalTime": "40",
+                "ingredients": [],
+                "manyIngredients": [
+                    {
+                        "title": "Plat principal",
+                        "ingredientList": [
+                                "235 ml (1 tasse) de couscous israélien",
+                                "2 gousses d’ail, tranchées finement",
+                                "30 ml (2 c. à table) de noix de pin",
+                                "30 ml (2 c. à table) de raisin de corinthe",
+                                "15 ml (1 c. à table) de piment concassé",
+                                "60 ml (¼ de tasse) de câpres",
+                                "60 ml (¼ de tasse) de vin blanc",
+                                "0,65 kg de calmars, coupées en tranches d’environ 1 cm (les tentacules en 2)",
+                                "3 oignons verts, tranchés finement et en gardant les parties blanche et verte séparées",
+                                "Sel, poivre",
+                                "Huile d’olive"
+                                ]
+                    },
+                    {
+                        "title": "Sauce tomate de base",
+                        "ingredientList": [
+                            "1,6 l de tomates entières",
+                                "4 gousses d’ail, tranchées finement",
+                                "1 gros oignon, coupé en petits dés",
+                                "1 carotte, râpée",
+                                "Thym",
+                                "Piment concassé",
+                                "Sel, poivre",
+                                "Huile d’olive"
+                                ]
+                    },
+                    {
+                        "title": "Pesto de jalapeños et amandes",
+                        "ingredientList": [
+                                "710 ml (3 tasses) de piments jalapeños, coupés grossièrement",
+                                "118 ml (½ tasse) d’amandes effilées",
+                                "118 ml (½ tasse) d’oignon rouge, coupé grossièrement",
+                                "Sel, poivre",
+                                "Huile d’olive"
+                                ]
+                    }
+                ],
+                "steps": [
+                        "Faire bouillir 3 litres d’eau, puis saler. Faire cuire le couscous pendant 2 minutes, drainer l’eau, puis verser le dans un bassin d’eau glacée. Une fois refroidi, retirer le couscous de l’eau froide et placer sur une assiette afin qu’il sèche.",
+                        "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
+                          ],
+                "source": "http://www.aveceric.com/twominute-calamari-sicilian-lifeguard-style/"
+                }
+                ]
+}
