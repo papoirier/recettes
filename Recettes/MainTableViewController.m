@@ -211,6 +211,10 @@
     // -----------------------------------------------------------------------
     if (longPressRecognizer.state == UIGestureRecognizerStateBegan) {
         
+        
+        CGPoint tp = [longPressRecognizer locationInView:self.tableView];
+        sourceIndex = [self.tableView indexPathForRowAtPoint:tp];
+        
         MainTableViewCell * cell = (MainTableViewCell*)[self.tableView cellForRowAtIndexPath:sourceIndex];
         if(cell) {
             cell.layer.borderColor = [UIColor redColor].CGColor;
@@ -227,6 +231,11 @@
         CGPoint tp = [longPressRecognizer locationInView:self.tableView];
         NSIndexPath * destIndex = [self.tableView indexPathForRowAtPoint:tp];
         
+        if (tp.y > self.tableView.contentSize.height) {
+            // this makes it exit the function - does nothing after it if it's true
+            return YES;
+        }
+        
         if([destIndex isEqual:sourceIndex] == NO) {
             // get/remove/insert the object, then move it
             [data exchangeObjectAtIndex:sourceIndex.row withObjectAtIndex:destIndex.row];
@@ -238,8 +247,8 @@
     // -----------------------------------------------------------------------
     // ended
     // -----------------------------------------------------------------------
-    if (longPressRecognizer.state == UIGestureRecognizerStateEnded) {
-        
+    if (longPressRecognizer.state == UIGestureRecognizerStateEnded || longPressRecognizer.state == UIGestureRecognizerStateCancelled) {
+        NSLog(@"ended");
         MainTableViewCell * cell = (MainTableViewCell*)[self.tableView cellForRowAtIndexPath:sourceIndex];
         if(cell) {
             cell.layer.borderColor = [UIColor redColor].CGColor;
@@ -247,6 +256,8 @@
         }
         [self saveData];
     }
+    
+    
     
     return YES;
 }
