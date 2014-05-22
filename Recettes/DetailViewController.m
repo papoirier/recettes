@@ -25,7 +25,7 @@
 #define PADDING 5.0f
 #define PADDING_LABEL 10.0f
 
-float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight;
+float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight, navBarHeight;
 float totalHeight;
 
 
@@ -49,12 +49,15 @@ float totalHeight;
     
     // HEIGHTS
     
-    imageHeight         = abs((HEIGHT - (20.0 + 44.0))/3);
+    navBarHeight        = (20.0 + 44.0);
+    imageHeight         = HEIGHT/2;
     prepTimeHeight      = 40.0;
     ingredientsHeight   = 0;
     stepsHeight         = 0;
     authorHeight        = 40.0;
     sourceHeight        = 40.0;
+    
+
     
     // SCROLL VIEW
     
@@ -65,21 +68,21 @@ float totalHeight;
     
     // LOADING ALL CONTENT
     
-    [self loadImageDetailsWithXPosition:0 andYPostition:0 andWidth:WIDTH andHeight:imageHeight];
+    [self loadImageDetailsWithXPosition:0 andYPostition:-navBarHeight andWidth:WIDTH andHeight:imageHeight];
     
-    [self loadPrepTimeDetailsWithXPosition:0 andYPostition:imageHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadPrepTimeDetailsWithXPosition:0 andYPostition:imageHeight-navBarHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadTotalTimeDetailsWithXPosition:WIDTH/2 andYPostition:imageHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadTotalTimeDetailsWithXPosition:WIDTH/2 andYPostition:imageHeight-navBarHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight andWidth:WIDTH andHeight:ingredientsHeight];
+    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight andWidth:WIDTH andHeight:ingredientsHeight];
     
-    [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight andWidth:WIDTH andHeight:stepsHeight];
+    [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight andWidth:WIDTH andHeight:stepsHeight];
     
-    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight andWidth:WIDTH andHeight:authorHeight];
+    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight andWidth:WIDTH andHeight:authorHeight];
     
-    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight+authorHeight andWidth:WIDTH andHeight:sourceHeight];
+    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight+authorHeight-navBarHeight andWidth:WIDTH andHeight:sourceHeight];
     
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight + sourceHeight;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight + sourceHeight-navBarHeight;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
@@ -139,7 +142,7 @@ float totalHeight;
 
 - (void)loadPrepTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"préparation " andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:0 andYPostition:imageHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self timeTextWithRegularString:@"préparation " andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -148,7 +151,7 @@ float totalHeight;
 
 - (void)loadTotalTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:WIDTH/2 andYPostition:imageHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self timeTextWithRegularString:@"total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------

@@ -17,7 +17,7 @@
 @synthesize darkSelectedView;
 @synthesize underCover, cover, underCoverLabel;
 
-#define TITLES_PADDING 10.0
+#define TITLES_PADDING 12.0
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
