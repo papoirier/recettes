@@ -343,30 +343,15 @@
         float newX = touchPoint.x - offset.x;
         originalFrame.origin = CGPointMake(newX, 0);
         CGPoint translation = [recognizer translationInView:self.tableView];
+
+        cellRef.underCover.alpha = 0;
+        float openCellAlpha = 0;
+        float w = self.view.frame.size.width;
+        openCellAlpha = (translation.x * w) / cellOpening;
         
-        // open it!
-        if (translation.x > cellOpening/4) {
-            [MainTableViewCell animateKeyframesWithDuration:0.5
-                                                      delay: 0
-                                                    options: UIViewKeyframeAnimationOptionBeginFromCurrentState
-                                                 animations:^{
-                                                     cellRef.underCover.alpha = 0.5;
-                                                     cellRef.underCoverLabel.alpha = 0.7;
-                                                 }
-                                                 completion:^(BOOL finished){
-                                                 }];
-        }
-        
-        if (translation.x > cellOpening/2) {
-            [MainTableViewCell animateKeyframesWithDuration:0.3
-                                                      delay: 0
-                                                    options: UIViewKeyframeAnimationOptionBeginFromCurrentState
-                                                 animations:^{
-                                                     cellRef.underCover.alpha = 1.0;
-                                                 }
-                                                 completion:^(BOOL finished){
-                                                 }];
-        }
+        cellRef.underCover.alpha = openCellAlpha/w;
+        cellRef.underCoverLabel.alpha = openCellAlpha/w;
+        NSLog(@"cell alpha: %f", cellRef.underCover.alpha);
         
         // clamping so it doesn't go left past 0
         if (originalFrame.origin.x < 0) {
@@ -395,7 +380,6 @@
             
             // animation to bring the cell cover's x position back to 0
             [self closeCell:cellRef onComplete:^(void){
-                
                 
                 CGPoint location= [recognizer locationInView:self.tableView];
                 NSIndexPath * pannedIndexPath = [self.tableView indexPathForRowAtPoint:location];
@@ -444,8 +428,8 @@
 - (void)closeCell:(MainTableViewCell *)cell onComplete:(BasicBlock)callback
 
 {
-    [MainTableViewCell animateKeyframesWithDuration:0.35
-                                              delay:0.1
+    [MainTableViewCell animateKeyframesWithDuration:0.3
+                                              delay:0
                                             options:UIViewKeyframeAnimationOptionBeginFromCurrentState
                                          animations:^{
                                              cell.cover.frame = CGRectMake(0, 0, self.view.frame.size.width, CELL_HEIGHT);
