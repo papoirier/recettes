@@ -211,16 +211,11 @@
     // -----------------------------------------------------------------------
     if (longPressRecognizer.state == UIGestureRecognizerStateBegan) {
         
-        
         CGPoint tp = [longPressRecognizer locationInView:self.tableView];
         sourceIndex = [self.tableView indexPathForRowAtPoint:tp];
         
         MainTableViewCell * cell = (MainTableViewCell*)[self.tableView cellForRowAtIndexPath:sourceIndex];
         if(cell) {
-            /*
-            cell.layer.borderColor = [UIColor redColor].CGColor;
-            cell.layer.borderWidth = 1;
-             */
             shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds];
             cell.layer.masksToBounds = NO;
             cell.layer.shadowColor = [UIColor blueColor].CGColor;
@@ -229,7 +224,6 @@
             cell.layer.shadowOpacity = 0.8;
             cell.layer.shadowPath = shadowPath.CGPath;
         }
-        
     }
     
     // -----------------------------------------------------------------------

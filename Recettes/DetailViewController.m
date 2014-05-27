@@ -63,26 +63,26 @@ float totalHeight;
     
     CGRect scrollViewFrame = CGRectMake(0, 0, WIDTH, HEIGHT);
     scrollView = [[UIScrollView alloc] initWithFrame:scrollViewFrame];
-    scrollView.backgroundColor = [UIColor purpleColor];
+    scrollView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:scrollView];
     
     // LOADING ALL CONTENT
     
     [self loadImageDetailsWithXPosition:0 andYPostition:-navBarHeight andWidth:WIDTH andHeight:imageHeight];
     
-    [self loadPrepTimeDetailsWithXPosition:0 andYPostition:imageHeight-navBarHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadPrepTimeDetailsWithXPosition:PADDING+2 andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadTotalTimeDetailsWithXPosition:WIDTH/2 andYPostition:imageHeight-navBarHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadTotalTimeDetailsWithXPosition:(WIDTH/2)+PADDING andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight andWidth:WIDTH andHeight:ingredientsHeight];
+    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
     
-    [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight andWidth:WIDTH andHeight:stepsHeight];
+    [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
     
-    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight andWidth:WIDTH andHeight:authorHeight];
+    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:authorHeight];
     
-    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight+authorHeight-navBarHeight andWidth:WIDTH andHeight:sourceHeight];
+    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight+authorHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:sourceHeight];
     
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight + sourceHeight-navBarHeight;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight + sourceHeight-navBarHeight+PADDING_LABEL;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
@@ -131,7 +131,7 @@ float totalHeight;
     
     textView.backgroundColor = [UIColor whiteColor];
     textView.attributedText = prepTimeString;
-    [textView sizeToFit];
+    //[textView sizeToFit];
     [textView actLikeTextLabel];
     [scrollView addSubview:textView];
 }
@@ -268,7 +268,7 @@ float totalHeight;
     UILabel * authorLabel = [[UILabel alloc] initWithFrame:authorTextViewRect];
     //authorLabel.backgroundColor = [UIColor blueColor];
     authorLabel.text = [NSString stringWithFormat:@"Inspiré par %@", author];
-    authorLabel.font = BROWN_18;
+    authorLabel.font = BROWN_14;
     [scrollView addSubview:authorLabel];
 }
 
@@ -287,6 +287,7 @@ float totalHeight;
     UIButton * sourceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     //sourceButton.backgroundColor = [UIColor blueColor];
     sourceButton.titleLabel.font = BROWN_14;
+    //NSString * author = [detail objectForKey:@"author"];
     [sourceButton setTitle:@"Source" forState:UIControlStateNormal];
     [sourceButton sizeToFit];
     sourceButton.tag = 444;
@@ -297,7 +298,7 @@ float totalHeight;
 // ALERT FOR THE SOURCE BUTTON
 
 - (void)buttonTouched:(id)sender {
-    UIAlertView * sourceButtonAlert = [[UIAlertView alloc] initWithTitle:@"Ouvrir Safari?" message:@"Vous allez quitter cette application" delegate:self cancelButtonTitle:@"Annuler" otherButtonTitles:@"Ouvrir", nil];
+    UIAlertView * sourceButtonAlert = [[UIAlertView alloc] initWithTitle:@"Ouvrir Safari?" message:@"Vous allez quitter cette application" delegate:self cancelButtonTitle:@"Non" otherButtonTitles:@"Oui", nil];
     [sourceButtonAlert show];
 }
 
@@ -307,33 +308,6 @@ float totalHeight;
         NSString * source = [detail objectForKey:@"source"];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:source]];
     }
-}
-
-// -----------------------------------------------------------------------
-
-- (void)noNavBar
-{
-    CGRect buttonRect = CGRectMake(0, 20, 120, 30);
-    UIView * backButtonView = [[UIView alloc] initWithFrame:buttonRect];
-    CGRect backButtonRect = CGRectMake(20, 0, 30, 20);
-    
-    UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = backButtonRect;
-    UIImage * backButtonImg = [UIImage imageNamed:@"back.png"];
-    [backButton setBackgroundImage:backButtonImg forState:UIControlStateNormal];
-    [backButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * theButton = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-    self.navigationItem.leftBarButtonItem = theButton;
-    
-    /*
-     backButton.titleLabel.font = BROWN_18;
-     [backButton setTitle:@"Recettes" forState:UIControlStateNormal];
-     backButton.frame = backButtonRect;
-     [backButton addTarget:self.navigationController action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-     */
-    
-    [backButtonView addSubview:backButton];
-    [self.view addSubview:backButtonView];
 }
 
 // -----------------------------------------------------------------------
