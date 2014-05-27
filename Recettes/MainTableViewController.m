@@ -218,12 +218,16 @@
         if(cell) {
             shadowPath = [UIBezierPath bezierPathWithRect:cell.bounds];
             cell.layer.masksToBounds = NO;
-            cell.layer.shadowColor = [UIColor blueColor].CGColor;
+            cell.layer.shadowColor = [UIColor greenColor].CGColor;
             cell.layer.shadowOffset = CGSizeMake(0, 0);
             cell.layer.shadowRadius = 20.0;
             cell.layer.shadowOpacity = 0.8;
             cell.layer.shadowPath = shadowPath.CGPath;
+            // bring the selected cell to the front
+            [self.tableView bringSubviewToFront:[cell superview]];
+            [[cell superview] bringSubviewToFront:cell];
         }
+        
     }
     
     // -----------------------------------------------------------------------
@@ -242,6 +246,7 @@
         if([destIndex isEqual:sourceIndex] == NO) {
             // get/remove/insert the object, then move it
             [data exchangeObjectAtIndex:sourceIndex.row withObjectAtIndex:destIndex.row];
+            //[self.tableView.superview bringSubviewToFront:self];
             [self.tableView moveRowAtIndexPath:sourceIndex toIndexPath:destIndex];
             sourceIndex = destIndex;
         }
@@ -308,6 +313,7 @@
 {
     CGPoint touchPoint = [recognizer locationInView:self.tableView]; // location where the user has fist touched
     float cellOpening = round(self.view.frame.size.width/3);
+    float openTrigger = 0.75;
     
     // -----------------------------------------------------------------------
     // Began
@@ -347,7 +353,7 @@
         cellRef.underCover.alpha = 0;
         float openCellAlpha = 0;
         float w = self.view.frame.size.width;
-        openCellAlpha = (translation.x * w) / cellOpening;
+        openCellAlpha = (translation.x * w) / (cellOpening*0.85);
         
         cellRef.underCover.alpha = openCellAlpha/w;
         cellRef.underCoverLabel.alpha = openCellAlpha/w;
@@ -376,12 +382,12 @@
         float percentage = touchPoint.x / cellRef.cover.frame.size.width;
         
         // open it!
-        if ((translation.x > cellOpening/2) || (percentage > 0.5 && vel.x > 0)) {
+        if ((translation.x > cellOpening * openTrigger) || (percentage > openTrigger && vel.x > 0)) {
             
             // animation to bring the cell cover's x position back to 0
             [self closeCell:cellRef onComplete:^(void){
                 
-                CGPoint location= [recognizer locationInView:self.tableView];
+                CGPoint location = [recognizer locationInView:self.tableView];
                 NSIndexPath * pannedIndexPath = [self.tableView indexPathForRowAtPoint:location];
                 //NSLog(@"selected row: %ld", (long)pannedIndexPath.row);
                 
@@ -428,18 +434,18 @@
 - (void)closeCell:(MainTableViewCell *)cell onComplete:(BasicBlock)callback
 
 {
-    [MainTableViewCell animateKeyframesWithDuration:0.3
-                                              delay:0
-                                            options:UIViewKeyframeAnimationOptionBeginFromCurrentState
-                                         animations:^{
-                                             cell.cover.frame = CGRectMake(0, 0, self.view.frame.size.width, CELL_HEIGHT);
-                                         }
-                                         completion:^(BOOL finished) {
-                                             if (callback) {
-                                                 // now it's C++
-                                                 callback();
-                                             }
-                                         }];
+    [MainTableViewCell animateWithDuration:0.25
+                          delay:0
+                        options:(UIViewAnimationCurveEaseOut|UIViewAnimationOptionAllowUserInteraction)
+                     animations:^{
+                         cell.cover.frame = CGRectMake(0, 0, self.view.frame.size.width, CELL_HEIGHT);
+                     }
+                                completion:^(BOOL finished){
+                                    if (callback) {
+                                        // now it's C++
+                                        callback();
+                                    }
+                     }];
 }
 
 @end

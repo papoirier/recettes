@@ -56,7 +56,6 @@ float totalHeight;
     stepsHeight         = 0;
     authorHeight        = 40.0;
     sourceHeight        = 40.0;
-    
 
     
     // SCROLL VIEW
@@ -70,7 +69,7 @@ float totalHeight;
     
     [self loadImageDetailsWithXPosition:0 andYPostition:-navBarHeight andWidth:WIDTH andHeight:imageHeight];
     
-    [self loadPrepTimeDetailsWithXPosition:PADDING+2 andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadPrepTimeDetailsWithXPosition:PADDING+1 andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
     [self loadTotalTimeDetailsWithXPosition:(WIDTH/2)+PADDING andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
@@ -78,11 +77,11 @@ float totalHeight;
     
     [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
     
-    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:authorHeight];
+    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:73 andHeight:29];
     
-    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight+authorHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:sourceHeight];
+    [self loadSourceDetailsWithXPosition:73 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:sourceHeight];
     
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight + sourceHeight-navBarHeight+PADDING_LABEL;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+PADDING_LABEL;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
@@ -142,7 +141,7 @@ float totalHeight;
 
 - (void)loadPrepTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"préparation " andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:@"Préparation " andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -151,7 +150,7 @@ float totalHeight;
 
 - (void)loadTotalTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:@"Total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -264,11 +263,12 @@ float totalHeight;
 {
     CGRect authorTextViewRect = CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition, rectWidth, rectHeight);
     
-    NSString * author = [detail objectForKey:@"author"];
+    //NSString * author = [detail objectForKey:@"author"];
     UILabel * authorLabel = [[UILabel alloc] initWithFrame:authorTextViewRect];
-    //authorLabel.backgroundColor = [UIColor blueColor];
-    authorLabel.text = [NSString stringWithFormat:@"Inspiré par %@", author];
+    //authorLabel.backgroundColor = [UIColor lightGrayColor];
+    authorLabel.text = [NSString stringWithFormat:@"Inspiré par"];
     authorLabel.font = BROWN_14;
+    //[authorLabel sizeToFit];
     [scrollView addSubview:authorLabel];
 }
 
@@ -285,10 +285,10 @@ float totalHeight;
     [scrollView addSubview:buttonView];
     
     UIButton * sourceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    //sourceButton.backgroundColor = [UIColor blueColor];
+    //sourceButton.backgroundColor = [UIColor purpleColor];
     sourceButton.titleLabel.font = BROWN_14;
-    //NSString * author = [detail objectForKey:@"author"];
-    [sourceButton setTitle:@"Source" forState:UIControlStateNormal];
+    NSString * author = [detail objectForKey:@"author"];
+    [sourceButton setTitle:author forState:UIControlStateNormal];
     [sourceButton sizeToFit];
     sourceButton.tag = 444;
     [sourceButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
