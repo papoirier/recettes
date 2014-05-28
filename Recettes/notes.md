@@ -12,3 +12,7 @@
 ### Global settings
 - Units: imperial or metric
 - Localization: français and english
+
+### New
+- Create new recipe
+- Take photo
