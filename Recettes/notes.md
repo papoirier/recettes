@@ -9,7 +9,7 @@
 ### Single recipe
 - Separation of ingredients and steps (segmented menu or other)
 - Ingredients as 'swipe-able' lists
--- If swiped, ingredients 'darkens' and goes to the bottom of the list
+- _If swiped, ingredients 'darkens' and goes to the bottom of the list_
 - Video snippets / animated GIFs
 - Delete recipe
 - Modify / adapt recipe
