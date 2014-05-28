@@ -26,7 +26,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor blackColor], NSForegroundColorAttributeName,
-                                                           BROWN_18, NSFontAttributeName,
+                                                           BROWN_BOLD_18, NSFontAttributeName,
                                                            nil]];
     
 

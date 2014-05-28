@@ -27,6 +27,7 @@
 
 float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight, navBarHeight;
 float totalHeight;
+float rulePadHeight = 21.0;
 
 
 - (void)viewDidLoad
@@ -77,11 +78,9 @@ float totalHeight;
     
     [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
     
-    [self loadAuthorDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:73 andHeight:29];
+    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:sourceHeight];
     
-    [self loadSourceDetailsWithXPosition:73 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:sourceHeight];
-    
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+PADDING_LABEL*2;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+rulePadHeight*2;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
@@ -169,20 +168,19 @@ float totalHeight;
     
     NSMutableParagraphStyle * ingredientsTitleParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     ingredientsTitleParagraphStyle.paragraphSpacing = 7.0;
-    ingredientsTitleParagraphStyle.paragraphSpacingBefore = 18;
+    ingredientsTitleParagraphStyle.paragraphSpacingBefore = 7.0;
     ingredientsTitleParagraphStyle.maximumLineHeight = 18.0 * 1.2;
-    ingredientsTitleParagraphStyle.headIndent = INSET;
+    ingredientsTitleParagraphStyle.headIndent = 0;
     
     NSDictionary * ingredientsTextViewAttributes = @{NSFontAttributeName: BROWN_18, NSParagraphStyleAttributeName: ingredientsParagraphStyle};
     NSDictionary * titlesTextViewAttributes = @{NSFontAttributeName: BROWN_BOLD_18, NSParagraphStyleAttributeName: ingredientsTitleParagraphStyle};
 
-    CGRect ingredientsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition, rectWidth - PADDING*2, rectHeight);
+    CGRect ingredientsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition + rulePadHeight, rectWidth - PADDING*2, rectHeight + rulePadHeight);
     
     UITextView * ingredientsTextView = [[UITextView alloc] initWithFrame:ingredientsTextViewRect];
     
     NSArray * ingredients = [detail objectForKey:@"ingredients"];
     NSArray * manyIngredients = [detail objectForKey:@"manyIngredients"];
-    //NSLog(@"many ing: %@", manyIngredients);
     
     if (manyIngredients != nil) {
         
@@ -209,7 +207,7 @@ float totalHeight;
         [ingredientsTextView sizeToFit];
         [ingredientsTextView actLikeTextLabel];
         [scrollView addSubview:ingredientsTextView];
-        
+        ingredientsHeight = ingredientsTextView.frame.size.height;
     }
     
     else if (ingredients != nil) {
@@ -219,9 +217,8 @@ float totalHeight;
         [ingredientsTextView sizeToFit];
         [ingredientsTextView actLikeTextLabel];
         [scrollView addSubview:ingredientsTextView];
+        ingredientsHeight = ingredientsTextView.frame.size.height + rulePadHeight;
     }
-    
-    ingredientsHeight = ingredientsTextView.frame.size.height;
     
     // rule
     [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
@@ -233,8 +230,7 @@ float totalHeight;
 
 - (void)loadStepsDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    CGRect stepsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition, rectWidth - PADDING*2, rectHeight);
-    
+    CGRect stepsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition + rulePadHeight, rectWidth - PADDING*2, rectHeight + rulePadHeight);
     UITextView * stepsTextView = [[UITextView alloc] initWithFrame:stepsTextViewRect];
     NSArray * steps = [detail objectForKey:@"steps"];
     NSString * stepsString = [steps componentsJoinedByString:@"\n"];
@@ -252,46 +248,43 @@ float totalHeight;
     [stepsTextView actLikeTextLabel];
     [scrollView addSubview:stepsTextView];
     
-    stepsHeight = stepsTextView.frame.size.height;
+    stepsHeight = stepsTextView.frame.size.height + rulePadHeight;
+    
+//    CGRect rulePad = CGRectMake(rectXPosition, rectYPosition, WIDTH, rulePadHeight);
+//    UIView * rulePadView = [[UIView alloc] initWithFrame:rulePad];
+//    [rulePadView setBackgroundColor:[UIColor redColor]];
+//    [scrollView addSubview:rulePadView];
     
     // rule
     [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
 }
 
 // -----------------------------------------------------------------------
-#pragma mark - AUTHOR
-// -----------------------------------------------------------------------
-
-- (void)loadAuthorDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
-{
-    CGRect authorTextViewRect = CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition, rectWidth, rectHeight);
-    
-    //NSString * author = [detail objectForKey:@"author"];
-    UILabel * authorLabel = [[UILabel alloc] initWithFrame:authorTextViewRect];
-    //authorLabel.backgroundColor = [UIColor lightGrayColor];
-    authorLabel.text = [NSString stringWithFormat:@"Inspiré par"];
-    authorLabel.font = BROWN_14;
-    //[authorLabel sizeToFit];
-    [scrollView addSubview:authorLabel];
-    
-    // rule
-    [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
-}
-
-// -----------------------------------------------------------------------
-#pragma mark - SOURCE
+#pragma mark - AUTHOR & SOURCE
 // -----------------------------------------------------------------------
 
 - (void)loadSourceDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    CGRect sourceTextViewRect = CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition, rectWidth, rectHeight);
+    // author
+    CGRect authorTextViewRect = CGRectMake(rectXPosition + PADDING_LABEL, rectYPosition + rulePadHeight, rectWidth, rectHeight + rulePadHeight);
+    //NSString * author = [detail objectForKey:@"author"];
+    UIView * authorView = [[UIView alloc] initWithFrame:authorTextViewRect];
+    UILabel * authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 72, rectHeight)];
+    authorLabel.text = [NSString stringWithFormat:@"Inspiré par"];
+    authorLabel.font = BROWN_14;
+    //[authorLabel sizeToFit];
+    //[authorView setBackgroundColor:[UIColor orangeColor]];
+    //[authorLabel setBackgroundColor:[UIColor blueColor]];
+    [authorView addSubview:authorLabel];
+    [scrollView addSubview:authorView];
     
+    // source
+    CGRect sourceTextViewRect = CGRectMake(73, 6, 200, rectHeight);
     UIView * buttonView = [[UIView alloc] initWithFrame:sourceTextViewRect];
-    //buttonView.backgroundColor = [UIColor redColor];
-    [scrollView addSubview:buttonView];
+    //[buttonView setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.3]];
+    [authorView addSubview:buttonView];
     
     UIButton * sourceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    //sourceButton.backgroundColor = [UIColor purpleColor];
     sourceButton.titleLabel.font = BROWN_14;
     NSString * author = [detail objectForKey:@"author"];
     [sourceButton setTitle:author forState:UIControlStateNormal];
@@ -299,6 +292,11 @@ float totalHeight;
     sourceButton.tag = 444;
     [sourceButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [buttonView addSubview:sourceButton];
+    
+    
+    // rule
+    [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
+    
 }
 
 // ALERT FOR THE SOURCE BUTTON
@@ -322,10 +320,16 @@ float totalHeight;
 
 - (void)addRuleWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition toView:(UIView *)view
 {
-    CGRect ruleFrame = CGRectMake(rectXPosition+PADDING_LABEL, rectYPosition, WIDTH - PADDING_LABEL*2, 1);
+    CGRect rulePad = CGRectMake(rectXPosition, rectYPosition, WIDTH, rulePadHeight);
+    UIView * rulePadView = [[UIView alloc] initWithFrame:rulePad];
+    [rulePadView setBackgroundColor:[UIColor whiteColor]];
+    [view addSubview:rulePadView];
+    
+    float ruleThickness = 1.0;
+    CGRect ruleFrame = CGRectMake(rectXPosition+PADDING_LABEL, (rulePadHeight-ruleThickness)/2, WIDTH - PADDING_LABEL*2, ruleThickness);
     UIView * ruleView = [[UIView alloc] initWithFrame:ruleFrame];
     ruleView.backgroundColor = [UIColor blackColor];
-    [view addSubview:ruleView];
+    [rulePadView addSubview:ruleView];
 }
 
 // -----------------------------------------------------------------------

@@ -220,7 +220,7 @@
             cell.layer.masksToBounds = NO;
             cell.layer.shadowColor = [UIColor greenColor].CGColor;
             cell.layer.shadowOffset = CGSizeMake(0, 0);
-            cell.layer.shadowRadius = 16.0;
+            cell.layer.shadowRadius = 10.0;
             cell.layer.shadowOpacity = 0.8;
             cell.layer.shadowPath = shadowPath.CGPath;
             
