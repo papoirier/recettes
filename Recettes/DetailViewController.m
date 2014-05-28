@@ -26,7 +26,6 @@
 #define PADDING_LABEL 10.0f
 
 float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight, navBarHeight;
-float imageViewHeight, prepTimeViewHeight, ingredientsViewHeight, stepsViewHeight, authorViewHeight, sourceViewHeight;
 float totalHeight;
 
 
@@ -57,14 +56,6 @@ float totalHeight;
     stepsHeight         = 0;
     authorHeight        = 40.0;
     sourceHeight        = 40.0;
-
-    // added heights
-    imageViewHeight         = - navBarHeight;
-    prepTimeViewHeight      = imageHeight - navBarHeight + PADDING_LABEL;
-    ingredientsViewHeight   = imageHeight + prepTimeHeight - navBarHeight + PADDING_LABEL;
-    stepsViewHeight         = ;
-    authorViewHeight        = ;
-    sourceViewHeight        = ;
     
     
     // SCROLL VIEW
@@ -76,13 +67,13 @@ float totalHeight;
     
     // LOADING ALL CONTENT
     
-    [self loadImageDetailsWithXPosition:0 andYPostition:imageViewHeight andWidth:WIDTH andHeight:imageHeight];
+    [self loadImageDetailsWithXPosition:0 andYPostition:-navBarHeight andWidth:WIDTH andHeight:imageHeight];
     
-    [self loadPrepTimeDetailsWithXPosition:PADDING+1 andYPostition:prepTimeViewHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadPrepTimeDetailsWithXPosition:PADDING+1 andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
     [self loadTotalTimeDetailsWithXPosition:(WIDTH/2)+PADDING andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadIngredientDetailsWithXPosition:0 andYPostition:ingredientsViewHeight andWidth:WIDTH andHeight:ingredientsHeight];
+    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
     
     [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
     
@@ -90,7 +81,7 @@ float totalHeight;
     
     [self loadSourceDetailsWithXPosition:73 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:sourceHeight];
     
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+PADDING_LABEL;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+PADDING_LABEL*2;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
@@ -144,20 +135,6 @@ float totalHeight;
     [textView actLikeTextLabel];
     
     [scrollView addSubview:textView];
-    // rule
-    [self addRuleWithXPosition:0 andYPostition:rectYPosition andWidth:WIDTH andHeight:rectHeight-3 toView:scrollView];
-}
-
-// -----------------------------------------------------------------------
-#pragma mark - HORIZONTAL RULE
-// -----------------------------------------------------------------------
-
-- (void)addRuleWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight toView:(UIView *)view
-{
-    CGRect ruleFrame = CGRectMake(rectXPosition+PADDING_LABEL, rectYPosition + rectHeight, rectWidth - PADDING_LABEL*2, 1);
-    UIView * ruleView = [[UIView alloc] initWithFrame:ruleFrame];
-    ruleView.backgroundColor = [UIColor blackColor];
-    [view addSubview:ruleView];
 }
 
 // -----------------------------------------------------------------------
@@ -244,9 +221,10 @@ float totalHeight;
         [scrollView addSubview:ingredientsTextView];
     }
     
-    
     ingredientsHeight = ingredientsTextView.frame.size.height;
-    //NSLog(@"ingredients height: %f", ingredientsHeight);
+    
+    // rule
+    [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
 }
 
 // -----------------------------------------------------------------------
@@ -275,7 +253,9 @@ float totalHeight;
     [scrollView addSubview:stepsTextView];
     
     stepsHeight = stepsTextView.frame.size.height;
-    //NSLog(@"steps height: %f", stepsHeight);
+    
+    // rule
+    [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
 }
 
 // -----------------------------------------------------------------------
@@ -293,6 +273,9 @@ float totalHeight;
     authorLabel.font = BROWN_14;
     //[authorLabel sizeToFit];
     [scrollView addSubview:authorLabel];
+    
+    // rule
+    [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
 }
 
 // -----------------------------------------------------------------------
@@ -331,6 +314,18 @@ float totalHeight;
         NSString * source = [detail objectForKey:@"source"];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:source]];
     }
+}
+
+// -----------------------------------------------------------------------
+#pragma mark - HORIZONTAL RULE
+// -----------------------------------------------------------------------
+
+- (void)addRuleWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition toView:(UIView *)view
+{
+    CGRect ruleFrame = CGRectMake(rectXPosition+PADDING_LABEL, rectYPosition, WIDTH - PADDING_LABEL*2, 1);
+    UIView * ruleView = [[UIView alloc] initWithFrame:ruleFrame];
+    ruleView.backgroundColor = [UIColor blackColor];
+    [view addSubview:ruleView];
 }
 
 // -----------------------------------------------------------------------

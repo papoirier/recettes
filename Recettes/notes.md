@@ -10,6 +10,8 @@
 - Separation of ingredients and steps (segmented menu or other)
 - Ingredients as 'swipe-able' lists
 - Video snippets / animated GIFs
+- Delete recipe
+- Modify / adapt recipe
 
 ### Recipe list
 - Right-to-left swipe to skip recipe (goes to bottom)
