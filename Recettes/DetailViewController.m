@@ -26,6 +26,7 @@
 #define PADDING_LABEL 10.0f
 
 float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight, navBarHeight;
+float imageViewHeight, prepTimeViewHeight, ingredientsViewHeight, stepsViewHeight, authorViewHeight, sourceViewHeight;
 float totalHeight;
 
 
@@ -57,6 +58,14 @@ float totalHeight;
     authorHeight        = 40.0;
     sourceHeight        = 40.0;
 
+    // added heights
+    imageViewHeight         = - navBarHeight;
+    prepTimeViewHeight      = imageHeight - navBarHeight + PADDING_LABEL;
+    ingredientsViewHeight   = imageHeight + prepTimeHeight - navBarHeight + PADDING_LABEL;
+    stepsViewHeight         = ;
+    authorViewHeight        = ;
+    sourceViewHeight        = ;
+    
     
     // SCROLL VIEW
     
@@ -67,13 +76,13 @@ float totalHeight;
     
     // LOADING ALL CONTENT
     
-    [self loadImageDetailsWithXPosition:0 andYPostition:-navBarHeight andWidth:WIDTH andHeight:imageHeight];
+    [self loadImageDetailsWithXPosition:0 andYPostition:imageViewHeight andWidth:WIDTH andHeight:imageHeight];
     
-    [self loadPrepTimeDetailsWithXPosition:PADDING+1 andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
+    [self loadPrepTimeDetailsWithXPosition:PADDING+1 andYPostition:prepTimeViewHeight andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
     [self loadTotalTimeDetailsWithXPosition:(WIDTH/2)+PADDING andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
+    [self loadIngredientDetailsWithXPosition:0 andYPostition:ingredientsViewHeight andWidth:WIDTH andHeight:ingredientsHeight];
     
     [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
     
@@ -114,7 +123,8 @@ float totalHeight;
     // FONTS FOR TIMES
     regFont  = @{NSFontAttributeName: BROWN_14};
     boldFont = @{NSFontAttributeName: BROWN_BOLD_14,
-                 NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
+                 //NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
+                 };
 
     NSString * rString = [NSString stringWithFormat:@"%@", regString];
     NSAttributedString * one = [[NSAttributedString alloc] initWithString:rString attributes:regFont];
