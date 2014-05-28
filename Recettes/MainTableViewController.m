@@ -26,7 +26,7 @@
     [self loadData];
     
     self.title = @"Recettes";
-    self.view.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:50.0/255.0 blue:40.0/255.0 alpha:1.0];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.navigationController setNavigationBarHidden:YES animated:NO]; // hide navigation bar
     [self.navigationController.navigationBar.topItem setTitle:@""];     // hide back button text
@@ -220,10 +220,11 @@
             cell.layer.masksToBounds = NO;
             cell.layer.shadowColor = [UIColor greenColor].CGColor;
             cell.layer.shadowOffset = CGSizeMake(0, 0);
-            cell.layer.shadowRadius = 20.0;
+            cell.layer.shadowRadius = 16.0;
             cell.layer.shadowOpacity = 0.8;
             cell.layer.shadowPath = shadowPath.CGPath;
-            // bring the selected cell to the front
+            
+            #pragma mark - bring the selected cell to the front
             [self.tableView bringSubviewToFront:[cell superview]];
             [[cell superview] bringSubviewToFront:cell];
         }
@@ -334,7 +335,7 @@
                 cell.underCover.backgroundColor = [UIColor greenColor];
                 cell.underCover.alpha = 0;
                 
-                cellRef.underCoverLabel.textColor = [UIColor blackColor];
+                cellRef.underCoverLabel.textColor = [UIColor whiteColor];
                 cellRef.underCoverLabel.alpha = 0;
             }
         }

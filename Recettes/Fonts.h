@@ -18,5 +18,6 @@
 #define BROWN_BOLD_14 [UIFont fontWithName:@"BrownStd-Bold" size:14]
 
 #define VOMIT_COLOR [UIColor colorWithRed:1 green:0.5 blue:0.2 alpha:0.5]
+#define DARK_GREEN_COLOR [UIColor colorWithRed:0.0/255.0 green:50.0/255.0 blue:40.0/255.0 alpha:1.0]
 
 @end

@@ -31,8 +31,8 @@
         underCover = [[UIView alloc] initWithFrame:cellRect];
  
         underCoverLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, CELL_HEIGHT/2 - CELL_HEIGHT/2.65, self.frame.size.width/2, CELL_HEIGHT*4.0/5.0)];
-        underCoverLabel.font = BROWN_18;
-        underCoverLabel.text = @"DONE \nDID \nIT!";
+        underCoverLabel.font = BROWN_BOLD_14;
+        underCoverLabel.text = @"DONE \nDID IT!";
         underCoverLabel.numberOfLines = 0;
 
         [underCover addSubview:underCoverLabel];

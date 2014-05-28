@@ -132,7 +132,22 @@ float totalHeight;
     textView.attributedText = prepTimeString;
     //[textView sizeToFit];
     [textView actLikeTextLabel];
+    
     [scrollView addSubview:textView];
+    // rule
+    [self addRuleWithXPosition:0 andYPostition:rectYPosition andWidth:WIDTH andHeight:rectHeight-3 toView:scrollView];
+}
+
+// -----------------------------------------------------------------------
+#pragma mark - HORIZONTAL RULE
+// -----------------------------------------------------------------------
+
+- (void)addRuleWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight toView:(UIView *)view
+{
+    CGRect ruleFrame = CGRectMake(rectXPosition+PADDING_LABEL, rectYPosition + rectHeight, rectWidth - PADDING_LABEL*2, 1);
+    UIView * ruleView = [[UIView alloc] initWithFrame:ruleFrame];
+    ruleView.backgroundColor = [UIColor blackColor];
+    [view addSubview:ruleView];
 }
 
 // -----------------------------------------------------------------------
@@ -184,14 +199,13 @@ float totalHeight;
     
     if (manyIngredients != nil) {
         
-        NSMutableAttributedString * mtbl     = [[NSMutableAttributedString alloc] init];
+        NSMutableAttributedString * mtbl = [[NSMutableAttributedString alloc] init];
         
         for (NSDictionary * dict in manyIngredients) {
             // title of multiple ingredient list
             NSString * title    = [NSString stringWithFormat:@"%@\n", [dict objectForKey:@"title"]];
             //NSString * title    = [NSString stringWithFormat:@"%@\n", [[dict objectForKey:@"title"] uppercaseString]];
-            
-            
+        
             // list of multiple ingredients
             NSArray  * ingred   = [dict objectForKey:@"ingredientList"];
             NSString * ingredientListString = [NSString stringWithFormat:@"%@\n", [ingred componentsJoinedByString:@"\n"]];
@@ -204,7 +218,6 @@ float totalHeight;
         }
         
         // now that we have the full string lets setup up the view
-        
         ingredientsTextView.attributedText = mtbl;
         [ingredientsTextView sizeToFit];
         [ingredientsTextView actLikeTextLabel];
