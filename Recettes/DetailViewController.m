@@ -142,7 +142,7 @@ float rulePadHeight = 21.0;
 
 - (void)loadPrepTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"Préparation " andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:NSLocalizedString(@"preparation", nil) andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -151,7 +151,7 @@ float rulePadHeight = 21.0;
 
 - (void)loadTotalTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:@"Total " andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:NSLocalizedString(@"total", nil) andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -270,7 +270,7 @@ float rulePadHeight = 21.0;
     //NSString * author = [detail objectForKey:@"author"];
     UIView * authorView = [[UIView alloc] initWithFrame:authorTextViewRect];
     UILabel * authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 72, rectHeight)];
-    authorLabel.text = [NSString stringWithFormat:@"Inspiré par"];
+    authorLabel.text = [NSString stringWithFormat:NSLocalizedString(@"inspired", nil)];
     authorLabel.font = BROWN_14;
     //[authorLabel sizeToFit];
     //[authorView setBackgroundColor:[UIColor orangeColor]];
@@ -279,7 +279,7 @@ float rulePadHeight = 21.0;
     [scrollView addSubview:authorView];
     
     // source
-    CGRect sourceTextViewRect = CGRectMake(73, 6, 200, rectHeight);
+    CGRect sourceTextViewRect = CGRectMake(75, 6, 200, rectHeight);
     UIView * buttonView = [[UIView alloc] initWithFrame:sourceTextViewRect];
     //[buttonView setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.3]];
     [authorView addSubview:buttonView];
@@ -302,7 +302,7 @@ float rulePadHeight = 21.0;
 // ALERT FOR THE SOURCE BUTTON
 
 - (void)buttonTouched:(id)sender {
-    UIAlertView * sourceButtonAlert = [[UIAlertView alloc] initWithTitle:@"Ouvrir Safari?" message:@"Vous allez quitter cette application" delegate:self cancelButtonTitle:@"Non" otherButtonTitles:@"Oui", nil];
+    UIAlertView * sourceButtonAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"alert_title", nil) message:NSLocalizedString(@"message", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"cancel_btn", nil) otherButtonTitles:NSLocalizedString(@"other_btn", nil), nil];
     [sourceButtonAlert show];
 }
 

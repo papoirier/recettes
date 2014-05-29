@@ -1,0 +1,32 @@
+/*
+ *
+ French strings
+ *
+ */
+
+
+// -----------------------------------------------------------------------
+// data
+
+"json_data"     = "RecipesData";
+
+
+// -----------------------------------------------------------------------
+// MainTableViewController
+
+"recipes"       = "Recettes";
+
+// -----------------------------------------------------------------------
+// DetailViewController
+
+"ingredients"   = "Ingrédients";
+"done"          = "Terminé";
+"preparation"   = "Préparation ";
+"total"         = "Total ";
+"inspired"      = "Inspiré par";
+
+// alert modal
+"alert_title"   = "Ouvrir Safari?";
+"message"       = "Vous allez quitter cette application";
+"cancel_btn"    = "Non";
+"other_btn"     = "Oui";

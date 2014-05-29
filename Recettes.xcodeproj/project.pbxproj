@@ -25,7 +25,6 @@
 		5A6313B51917E29200C35420 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313B41917E29200C35420 /* MainTableViewController.m */; };
 		5A6313B71917FBA000C35420 /* RecipesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A6313B61917FBA000C35420 /* RecipesData.json */; };
 		5A6313B91917FBC900C35420 /* BrownStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6313B81917FBC900C35420 /* BrownStd-Regular.otf */; };
-		5A6313C119181E6600C35420 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313C019181E6600C35420 /* DetailTableViewController.m */; };
 		5A6313CC19189B2400C35420 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5A6313C619189B2400C35420 /* .gitignore */; };
 		5A6313CD19189B2400C35420 /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313C819189B2400C35420 /* AppUtils.m */; };
 		5A6313CE19189B2400C35420 /* PassthroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313CA19189B2400C35420 /* PassthroughView.m */; };
@@ -34,6 +33,7 @@
 		5AB46EF7191BE695006BC0E6 /* BrownStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB46EF5191BE695006BC0E6 /* BrownStd-Bold.otf */; };
 		5AB46EF8191BE695006BC0E6 /* BrownStd-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB46EF6191BE695006BC0E6 /* BrownStd-Italic.otf */; };
 		5AB46EFB191BE755006BC0E6 /* Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB46EFA191BE755006BC0E6 /* Fonts.m */; };
+		5AF9018C1937B7E400562162 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9018E1937B7E400562162 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +72,6 @@
 		5A6313B41917E29200C35420 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		5A6313B61917FBA000C35420 /* RecipesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecipesData.json; sourceTree = "<group>"; };
 		5A6313B81917FBC900C35420 /* BrownStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrownStd-Regular.otf"; sourceTree = "<group>"; };
-		5A6313BF19181E6600C35420 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
-		5A6313C019181E6600C35420 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		5A6313C619189B2400C35420 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5A6313C719189B2400C35420 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		5A6313C819189B2400C35420 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
@@ -86,6 +84,11 @@
 		5AB46EF6191BE695006BC0E6 /* BrownStd-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrownStd-Italic.otf"; sourceTree = "<group>"; };
 		5AB46EF9191BE755006BC0E6 /* Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fonts.h; sourceTree = "<group>"; };
 		5AB46EFA191BE755006BC0E6 /* Fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fonts.m; sourceTree = "<group>"; };
+		5AF901891937B7AD00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		5AF9018A1937B7AD00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5AF9018B1937B7AD00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5AF9018D1937B7E400562162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5AF9018F1937B82E00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +160,6 @@
 				5AB46EFA191BE755006BC0E6 /* Fonts.m */,
 				5A6313901917D36D00C35420 /* Main.storyboard */,
 				5AB46EFC191BF153006BC0E6 /* image blur */,
-				5A6313D61919BA7600C35420 /* trash */,
 				5A6313961917D36D00C35420 /* Images.xcassets */,
 				5A6313851917D36D00C35420 /* Supporting Files */,
 			);
@@ -170,6 +172,7 @@
 				5A6313C519189B2400C35420 /* IOSUtils-master */,
 				5A6313BA1917FBCD00C35420 /* fonts */,
 				5A6313B61917FBA000C35420 /* RecipesData.json */,
+				5AF9018E1937B7E400562162 /* Localizable.strings */,
 				5A6313861917D36D00C35420 /* Recettes-Info.plist */,
 				5A6313871917D36D00C35420 /* InfoPlist.strings */,
 				5A63138A1917D36D00C35420 /* main.m */,
@@ -217,15 +220,6 @@
 				5A6313CB19189B2400C35420 /* README.md */,
 			);
 			path = "IOSUtils-master";
-			sourceTree = "<group>";
-		};
-		5A6313D61919BA7600C35420 /* trash */ = {
-			isa = PBXGroup;
-			children = (
-				5A6313BF19181E6600C35420 /* DetailTableViewController.h */,
-				5A6313C019181E6600C35420 /* DetailTableViewController.m */,
-			);
-			name = trash;
 			sourceTree = "<group>";
 		};
 		5AB46EFC191BF153006BC0E6 /* image blur */ = {
@@ -296,6 +290,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 5A6313721917D36D00C35420;
 			productRefGroup = 5A63137C1917D36D00C35420 /* Products */;
@@ -318,6 +313,7 @@
 				5A6313B71917FBA000C35420 /* RecipesData.json in Resources */,
 				5AB46EF8191BE695006BC0E6 /* BrownStd-Italic.otf in Resources */,
 				5A6313891917D36D00C35420 /* InfoPlist.strings in Resources */,
+				5AF9018C1937B7E400562162 /* Localizable.strings in Resources */,
 				5A6313CF19189B2400C35420 /* README.md in Resources */,
 				5A6313B91917FBC900C35420 /* BrownStd-Regular.otf in Resources */,
 				5A6313CC19189B2400C35420 /* .gitignore in Resources */,
@@ -340,7 +336,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A6313C119181E6600C35420 /* DetailTableViewController.m in Sources */,
 				5A6313B51917E29200C35420 /* MainTableViewController.m in Sources */,
 				5A6313CD19189B2400C35420 /* AppUtils.m in Sources */,
 				5A6313CE19189B2400C35420 /* PassthroughView.m in Sources */,
@@ -376,6 +371,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A6313881917D36D00C35420 /* en */,
+				5AF9018A1937B7AD00562162 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -384,6 +380,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A6313911917D36D00C35420 /* Base */,
+				5AF901891937B7AD00562162 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -392,8 +389,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A6313A71917D36D00C35420 /* en */,
+				5AF9018B1937B7AD00562162 /* fr */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5AF9018E1937B7E400562162 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AF9018D1937B7E400562162 /* en */,
+				5AF9018F1937B82E00562162 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

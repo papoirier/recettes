@@ -34,7 +34,7 @@
     #pragma mark - LOADING THE DATA
     // ---------------------------------------------------
     
-    NSURL * url = [[NSBundle mainBundle] URLForResource:@"RecipesData" withExtension:@"json"];
+    NSURL * url = [[NSBundle mainBundle] URLForResource:NSLocalizedString(@"json_data", nil) withExtension:@"json"];
     NSData * URLData = [[NSData alloc] initWithContentsOfURL:url];
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:URLData options:kNilOptions error:nil];
     

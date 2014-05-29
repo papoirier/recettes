@@ -25,7 +25,8 @@
     [super viewDidLoad];
     [self loadData];
     
-    self.title = @"Recettes";
+    //self.title = @"Recettes";
+    [self setTitle:NSLocalizedString(@"recipes", nil)];
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.navigationController setNavigationBarHidden:YES animated:NO]; // hide navigation bar

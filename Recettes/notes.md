@@ -13,6 +13,7 @@
 - Video snippets / animated GIFs
 - Delete recipe
 - Modify / adapt recipe
+- Animation of the swiped, 'made' recipe (underCover)
 
 ### Recipe list
 - Right-to-left swipe to skip recipe (goes to bottom)
@@ -22,6 +23,7 @@
 - Units: imperial or metric
 - Localization: français and english
 - Walkthrough / tutorial on how to use the app
+- Dynamic type
 
 ### New
 - Create new recipe
