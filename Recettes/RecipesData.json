@@ -1,138 +1,326 @@
 {
     "recipes": [
+        {
+            "title_fr": "Lotte rôtie avec ragoût d’asperges et champignons",
+            "title_en": "Roast monkfish with casserole of mushrooms and asparagus",
+            "short_title_fr": "Lotte rôtie",
+            "short_title_en": "Roast monkfish",
+            "author": "Éric Ripert",
+            "image": "monkfish.png",
+            "prep_time": "30",
+            "total_time": "45",
+            "ingredients": [
                 {
-                "title": "Lotte rôtie avec ragoût d’asperges et champignons",
-                "shortTitle": "Lotte rôtie",
-                "author": "Éric Ripert",
-                "image": "monkfish.png",
-                "prepTime": "30",
-                "totalTime": "45",
-                "ingredients": [
-                                "0,5 kg (1 lb) de lotte",
-                                "Piment chipotle en poudre",
-                                "470 g (2 tasses) de champignons crimini, coupés en dés",
-                                "Ail, émincé",
-                                "30 g (2 c. à table) d’échalotte, émincée",
-                                "50 ml (2 c. à table) de bouillon de légumes",
-                                "8 asperges, tranchées en biais",
-                                "120 g (½ tasse) de gourganes",
-                                "Persil, haché"
-                                ],
-                "steps": [
-                          "Préchauffer le four à 230˚C (450˚F). À feu élevé, faire chauffer l’huile dans une poêle anti-adhésive qui va au four. Déposer le filet dans la poêle et faire sauter pendant environ 5 minutes, jusqu’à ce que le dessous poisson soit bien doré. Tourner le poisson et faire cuire au four pour une durée d’environ 8 minutes (ou jusqu’à temps que le centre du poisson soit chaud).",
-                          "À feu moyen, mettre dans une casserole de l’huile d’olive, les champignons et le piment chipotle. Couvrir et faire cuire environ 4 minutes. Ajouter l’ail, l’échalote et le bouillon de légumes. Réduire L’intensité du feu à doux puis cuire, à couvert fermé, environ 5 minutes en faisant attention de ne pas laisser le liquide s’évaporer.",
-                          "Ajouter les asperges, les gourganes et le persil. Cuire environ 2 minutes. Assaisonner avec sel et poivre. Retirer du feu. Faire pré-chauffer des assiettes.",
-                          "Transférer la lotte du four sur une planche à découper, puis laisser reposer 1-2 minutes. Couper le poisson en tranches de 2 cm d’épaisseur. Placer la lotte sur les assiettes puis déposer le ragoût de légumes autour. Servir immédiatement."
-                          ],
-                "source": "http://www.marthastewart.com/313594/erics-roast-monkfish-with-casserole-of-m"
+                    "name_fr": "Lotte",
+                    "quantity_fr": "0,5 kg",
+                    "name_en": "Monkfish",
+                    "quantity_en": "1 lb"
                 },
                 {
-                "title": "Farro en une seule casserole",
-                "author": "Deb Perelman",
-                "image": "farro.png",
-                "prepTime": "10",
-                "totalTime": "40",
-                "ingredients": [
-                                "475 ml (2 tasses) d’eau",
-                                "175 g (1 tasse) de farro",
-                                "½ gros oignon, tranché finement",
-                                "2 gousses d’ail émincées",
-                                "255 g de tomates cerise",
-                                "Basilic en chiffonade",
-                                "Sel",
-                                "Piment concassé (soupçon facultatif)",
-                                "Huile d’olive",
-                                "Parmesan râpé"
-                                ],
-                "steps": [
-                          "Faire tremper le farro dans une casserole pour une vingtaine de minutes. Pendant ce temps, commencer la préparation des autres ingrédients.",
-                          "Couper le demi oignon en deux pour obtenir deux quarts, puis couper en fines tranches. Émincer l’ail. Couper les tomates en demies ou quarts. Ajouter le sel, de l’huile d’olive et le piment concassé. Ajouter tous ces ingrédients au dès qu’ils sont prêts à la casserole.",
-                          "Amener à ébullition. Lorsque le tout bout, réduire le feu puis continer la cuisson à découvert pour environ 30 minutes.",
-                          "Servir dans des bols. Ajouter un filet d’huile, la chiffonade de basilic et du parmesan râpé."
-                          ],
-                "source": "http://smittenkitchen.com/blog/2013/07/one-pan-farro-with-tomatoes/"
+                    "name_fr": "Champignons crimini",
+                    "quantity_fr": "470 g",
+                    "name_en": "Crimini mushrooms",
+                    "quantity_en": "2 cups"
                 },
-
                 {
-                "title": "Calmars 2 minutes, style sauveteur sicilien",
-                "shortTitle": "Calmars 2 minutes",
-                "author": "Mario Batali",
-                "image": "calamari.png",
-                "prepTime": "10",
-                "totalTime": "40",
-                "ingredients": [],
-                "manyIngredients": [
-                    {
-                        "title": "Plat principal",
-                        "ingredientList": [
-                                "235 ml (1 tasse) de couscous israélien",
-                                "2 gousses d’ail, tranchées finement",
-                                "30 ml (2 c. à table) de noix de pin",
-                                "30 ml (2 c. à table) de raisin de corinthe",
-                                "15 ml (1 c. à table) de piment concassé",
-                                "60 ml (¼ de tasse) de câpres",
-                                "60 ml (¼ de tasse) de vin blanc",
-                                "0,65 kg de calmars, coupées en tranches d’environ 1 cm (les tentacules en 2)",
-                                "3 oignons verts, tranchés finement et en gardant les parties blanche et verte séparées",
-                                "Sel, poivre",
-                                "Huile d’olive"
-                                ]
-                    },
-                    {
-                        "title": "Sauce tomate de base",
-                        "ingredientList": [
-                            "1,6 l de tomates entières",
-                                "4 gousses d’ail, tranchées finement",
-                                "1 gros oignon, coupé en petits dés",
-                                "1 carotte, râpée",
-                                "Thym",
-                                "Piment concassé",
-                                "Sel, poivre",
-                                "Huile d’olive"
-                                ]
-                    },
-                    {
-                        "title": "Pesto de jalapeños et amandes",
-                        "ingredientList": [
-                                "710 ml (3 tasses) de piments jalapeños, coupés grossièrement",
-                                "118 ml (½ tasse) d’amandes effilées",
-                                "118 ml (½ tasse) d’oignon rouge, coupé grossièrement",
-                                "Sel, poivre",
-                                "Huile d’olive"
-                                ]
-                    }
-                ],
-                "steps": [
-                        "Faire bouillir 3 litres d’eau, puis saler. Faire cuire le couscous pendant 2 minutes, drainer l’eau, puis verser le dans un bassin d’eau glacée. Une fois refroidi, retirer le couscous de l’eau froide et placer sur une assiette afin qu’il sèche.",
-                        "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
-                          ],
-                "source": "http://www.aveceric.com/twominute-calamari-sicilian-lifeguard-style/"
+                    "name_fr": "Ail",
+                    "quantity_fr": "1 gousse",
+                    "name_en": "Garlic",
+                    "quantity_en": "1 clove"
                 },
-
                 {
-                "title": "Tarte aux pommes de Monsieur Pépin",
-                "shortTitle": "Tarte aux pommes",
-                "author": "Jacques Pépin",
-                "image": "apple-pie.png",
-                "prepTime": "20",
-                "totalTime": "70",
-                "ingredients": [
-                                "145 g (1 ¼ tasse) de farine tout-usage",
-                                "45 g (3 c. à table) de sucre",
-                                "(1 c. à thé) de poudre à pâte",
-                                "(¼ c. à thé) de sel",
-                                "120 g (8 c. à table) de beurre non salé",
-                                "30 ml (2 c. à table) de lait",
-                                "1 œuf, battu légèrement",
-                                "2 grosses pommes (Empire, Cortland, Jonagold ...), pelées, écœurées et coupées en morceaux",
-                                "30 ml (2 c. à table) de confiture (optionnel)"
-                ],
-                "steps": [
-                        "Pré-chauffer le four à 190˚C (375˚F). Dans un grand bol, mélanger la farine, 1 cuillère à table de sucre, la poudre à pâte et le sel. Ajouter 6 cuillères à table de beurre, puis, avec vos doigts, incorporer dans le mélange de farine afin de grossièrement former des amoncellements de la taille de petits pois. Ajouter le lait et l'œuf et mélanger avec une cuillère en bois jusqu'à ce que que la pâte soit à peine formée. Terminer la formation de la pâte avec vos mains. Transférer la pâte dans une assiette à tarte en verre (20–25 cm) puis, avec des doigts légèrement farinés, presser la pâte sur les fond et les parois de l'assiette. Réfrigérer 30 minutes.",
-                        "De manière concentrique, étaler les morceaux de pomme côte-à-côte sur le fond de l'assiette à tarte en appuyant légèrement sur la pâte. Placer les derniers morceaux de pomme au centre de la tarte. Saupoudrer les pommes avec le reste du sucre, puis y incruster en petits morceaux le restant du beurre.",
-                        "Cuire au four pendant environ 50–55 minutes, jusqu'à ce que la croûte soit dorée. Laisser refroidir au moins 15 minutes avant de servir."
-                          ],
-                "source": "http://www.saveur.com/article/Recipes/Mamans-Apple-Tart"
+                    "name_fr": "Échalotte",
+                    "quantity_fr": "30 g",
+                    "name_en": "Shallot",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Bouillon de légumes",
+                    "quantity_fr": "50 ml",
+                    "name_en": "Vegetable broth",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Asperges",
+                    "quantity_fr": "8",
+                    "name_en": "Asparagus",
+                    "quantity_en": "8"
+                },
+                {
+                    "name_fr": "Gourganes",
+                    "quantity_fr": "120 g",
+                    "name_en": "Fava beans",
+                    "quantity_en": "½ cup"
+                },
+                {
+                    "name_fr": "Persil",
+                    "quantity_fr": "",
+                    "name_en": "Parsley",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Chipotle, moulu",
+                    "quantity_fr": "",
+                    "name_en": "Chipotle, ground",
+                    "quantity_en": ""
                 }
-                ]
+            ],
+            "directions_fr": [
+                "Préchauffer le four à 230˚C (450˚F). À feu élevé, faire chauffer l’huile dans une poêle anti-adhésive qui va au four. Déposer le filet dans la poêle et faire sauter pendant environ 5 minutes, jusqu’à ce que le dessous poisson soit bien doré. Tourner le poisson et faire cuire au four pour une durée d’environ 8 minutes (ou jusqu’à temps que le centre du poisson soit chaud).",
+                "À feu moyen, mettre dans une casserole de l’huile d’olive, les champignons et le piment chipotle. Couvrir et faire cuire environ 4 minutes. Ajouter l’ail, l’échalote et le bouillon de légumes. Réduire L’intensité du feu à doux puis cuire, à couvert fermé, environ 5 minutes en faisant attention de ne pas laisser le liquide s’évaporer.",
+                "Ajouter les asperges, les gourganes et le persil. Cuire environ 2 minutes. Assaisonner avec sel et poivre. Retirer du feu. Faire pré-chauffer des assiettes.",
+                "Transférer la lotte du four sur une planche à découper, puis laisser reposer 1-2 minutes. Couper le poisson en tranches de 2 cm d’épaisseur. Placer la lotte sur les assiettes puis déposer le ragoût de légumes autour. Servir immédiatement."
+            ],
+            "directions_en": [
+                "Preheat oven to 450 degrees. Divide corn oil between two 10-inch nonstick ovenproof skillets. Over high heat, heat oil until just smoking. Place two pieces of monkfish in each skillet, and saute until fish is browned on the bottom, about 5 minutes. Turn the fish, and transfer the skillets to the preheated oven. Bake for about 8 minutes, or until a cake tester can be easily inserted into the fish or when left in the fillet for 5 seconds, the cake tester is warm to your lip.",
+                "In a large enameled pot over medium heat, add butter, bacon, and mushrooms. Cover, and cook about 4 minutes. Add garlic, shallots, and chicken stock. Reduce heat to low, and cook, covered, about 5 minutes, being careful not to let the liquid evaporate.",
+                "Add asparagus, snow peas, and parsley. Saute until just heated through. Season with salt and pepper. Remove from heat, and divide among four plates.",
+                "Transfer the monkfish from the oven to a cutting board, and slice the pieces into ¼-inch-thick slices; fan over vegetables. Serve immediately."
+            ],
+            "source": "http://www.marthastewart.com/313594/erics-roast-monkfish-with-casserole-of-m"
+        },
+        {
+            "title_fr": "Farro avec tomates en une seule casserole",
+            "title_en": "One-pan farro with tomatoes",
+            "author": "Deb Perelman",
+            "image": "farro.png",
+            "prep_time": "10",
+            "total_time": "40",
+            "ingredients": [
+                {
+                    "name_fr": "Farro",
+                    "quantity_fr": "175 g",
+                    "name_en": "Farro",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Oignon, gros",
+                    "quantity_fr": "",
+                    "name_en": "Onion, large",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Ail",
+                    "quantity_fr": "2 gousses",
+                    "name_en": "Garlic",
+                    "quantity_en": "2 cloves"
+                },
+                {
+                    "name_fr": "Tomates cerise",
+                    "quantity_fr": "255 g",
+                    "name_en": "Cherry tomatoes",
+                    "quantity_en": "9 ounces"
+                },
+                {
+                    "name_fr": "Piment concassé",
+                    "quantity_fr": "5 g",
+                    "name_en": "Red pepper flakes",
+                    "quantity_en": "¼ tsp"
+                },
+                {
+                    "name_fr": "Sel de mer",
+                    "quantity_fr": "20 g",
+                    "name_en": "Sea salt",
+                    "quantity_en": "1 ¼ tsp"
+                },
+                {
+                    "name_fr": "Chipotle, moulu",
+                    "quantity_fr": "",
+                    "name_en": "Chipotle, ground",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Basilic",
+                    "quantity_fr": "",
+                    "name_en": "Basil",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Parmesan",
+                    "quantity_fr": "",
+                    "name_en": "Parmesan",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Huile d’olive",
+                    "quantity_fr": "",
+                    "name_en": "Olive oil",
+                    "quantity_en": ""
+                }
+            ],
+            "directions_fr": [
+                "Faire tremper le farro dans une casserole pour une vingtaine de minutes. Pendant ce temps, commencer la préparation des autres ingrédients.",
+                "Couper le demi oignon en deux pour obtenir deux quarts, puis couper en fines tranches. Émincer l’ail. Couper les tomates en demies ou quarts. Ajouter le sel, de l’huile d’olive et le piment concassé. Ajouter tous ces ingrédients au dès qu’ils sont prêts à la casserole.",
+                "Amener à ébullition. Lorsque le tout bout, réduire le feu puis continer la cuisson à découvert pour environ 30 minutes.",
+                "Servir dans des bols. Ajouter un filet d’huile, la chiffonade de basilic et du parmesan râpé."
+            ],
+            "directions_en": [
+                "Place water and farro in a medium saucepan to presoak (I find just 5 to 10 minutes sufficient) while you prepare the other ingredients.",
+                "Adding each ingredient to the pot as you finish preparing it, cut onion in half again, and very thinly slice it into quarter-moons. Thinly slice garlic cloves as well. Halve or quarter tomatoes. Add salt, pepper flakes (to taste) and 1 tablespoon olive oil to pan, and set a timer for 30 minutes.",
+                "Bring uncovered pan (no lid necessary) up to a boil, then reduce to a gentle simmer, stirring occasionally. When the timer rings, the farro should be perfectly cooked (tender but with a meaty chew), seasoned and the cooking water should be almost completely absorbed. If needed, though I’ve never found it necessary, cook it for 5 additional minutes, until farro is more tender.",
+                "Transfer to a wide serving bowl. If there’s enough leftover cooking liquid to be bothersome, simply use a slotted spoon to leave the amount you wish to behind. Drizzle farro lightly with additional olive oil, scatter with basil and parmesan. Eat immediately."
+            ],
+            "source": "http://smittenkitchen.com/blog/2013/07/one-pan-farro-with-tomatoes/"
+        },
+        {
+            "title_fr": "Calmars deux minutes, style sauveteur sicilien",
+            "title_en": "Two-minute calamari, Sicilian lifeguard style",
+            "short_title_fr": "Calmars 2 minutes",
+            "short_title_en": "2-minute calamari",
+            "author": "Mario Batali",
+            "image": "calamari.png",
+            "prep_time": "10",
+            "total_time": "40",
+            "ingredients": [
+                {
+                    "name_fr": "Couscous israélien",
+                    "quantity_fr": "170 g",
+                    "name_en": "Israeli couscous",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Calmars",
+                    "quantity_fr": "0,5 kg",
+                    "name_en": "Calamari",
+                    "quantity_en": "1 lb"
+                },
+                {
+                    "name_fr": "Ail",
+                    "quantity_fr": "2 gousses",
+                    "name_en": "Garlic",
+                    "quantity_en": "2 cloves"
+                },
+                {
+                    "name_fr": "Noix de pin",
+                    "quantity_fr": "20 g",
+                    "name_en": "Pine nuts",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Raisins de corinthe",
+                    "quantity_fr": "15 g",
+                    "name_en": "Currants",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Piment concassé",
+                    "quantity_fr": "10 g",
+                    "name_en": "Red pepper flakes",
+                    "quantity_en": "1 tbsp"
+                },
+                {
+                    "name_fr": "Câpres (fleurs)",
+                    "quantity_fr": "50 g",
+                    "name_en": "Caperberries",
+                    "quantity_en": "¼ cup"
+                },
+                {
+                    "name_fr": "Vin blanc",
+                    "quantity_fr": "60 ml",
+                    "name_en": "White wine",
+                    "quantity_en": "¼ cup"
+                },
+                {
+                    "name_fr": "Sauce tomate",
+                    "quantity_fr": "240 ml",
+                    "name_en": "Tomato sauce",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Pesto amandes et jalapeño",
+                    "quantity_fr": "60 g",
+                    "name_en": "Jalapeño & almond pesto",
+                    "quantity_en": "3 tbsp"
+                },
+                {
+                    "name_fr": "Oignons verts",
+                    "quantity_fr": "3",
+                    "name_en": "Green onions",
+                    "quantity_en": "3"
+                },
+                {
+                    "name_fr": "Huile d’olive",
+                    "quantity_fr": "",
+                    "name_en": "Olive oil",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Parmesan",
+                    "quantity_fr": "",
+                    "name_en": "Parmesan",
+                    "quantity_en": ""
+                }
+            ],
+            "directions_fr": [
+                "Faire bouillir 3 litres d’eau, puis saler. Faire cuire le couscous pendant 2 minutes, drainer l’eau, puis verser le dans un bassin d’eau glacée. Une fois refroidi, retirer le couscous de l’eau froide et placer sur une assiette afin qu’il sèche.",
+                "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
+            ],
+            "source": "http://www.aveceric.com/twominute-calamari-sicilian-lifeguard-style/"
+        },
+        {
+            "title_fr": "Tarte aux pommes de Monsieur Pépin",
+            "title_en": "Mr. Pépin’s apple tart",
+            "short_title": "Tarte aux pommes",
+            "author": "Jacques Pépin",
+            "image": "apple-pie.png",
+            "prep_time": "20",
+            "total_time": "70",
+            "ingredients": [
+                {
+                    "name_fr": "Farine tout-usage",
+                    "quantity_fr": "145 g",
+                    "name_en": "All-purpose flour",
+                    "quantity_en": "1 ¼ cups"
+                },
+                {
+                    "name_fr": "Sucre",
+                    "quantity_fr": "45 g",
+                    "name_en": "Sugar",
+                    "quantity_en": "3 tbsp"
+                },
+                {
+                    "name_fr": "Poudre à pâte",
+                    "quantity_fr": "5,5 g",
+                    "name_en": "Baking powder",
+                    "quantity_en": "1 tsp"
+                },
+                {
+                    "name_fr": "Beurre non salé",
+                    "quantity_fr": "120 g",
+                    "name_en": "Unsalted butter",
+                    "quantity_en": "8 tbsp"
+                },
+                {
+                    "name_fr": "Lait",
+                    "quantity_fr": "30 ml",
+                    "name_en": "Milk",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Œuf",
+                    "quantity_fr": "1",
+                    "name_en": "Egg",
+                    "quantity_en": "1"
+                },
+                {
+                    "name_fr": "Pommes",
+                    "quantity_fr": "2 grosses",
+                    "name_en": "Apples",
+                    "quantity_en": "2 big"
+                },
+                {
+                    "name_fr": "Confiture",
+                    "quantity_fr": "optionnel",
+                    "name_en": "Jam",
+                    "quantity_en": "optionnal"
+                }
+            ],
+            "directions_fr": [
+                "Pré-chauffer le four à 190˚C (375˚F). Dans un grand bol, mélanger la farine, 1 cuillère à table de sucre, la poudre à pâte et le sel. Ajouter 6 cuillères à table de beurre, puis, avec vos doigts, incorporer dans le mélange de farine afin de grossièrement former des amoncellements de la taille de petits pois. Ajouter le lait et l'œuf et mélanger avec une cuillère en bois jusqu'à ce que que la pâte soit à peine formée. Terminer la formation de la pâte avec vos mains. Transférer la pâte dans une assiette à tarte en verre (20–25 cm) puis, avec des doigts légèrement farinés, presser la pâte sur les fond et les parois de l'assiette. Réfrigérer 30 minutes.",
+                "De manière concentrique, étaler les morceaux de pomme côte-à-côte sur le fond de l’assiette à tarte en appuyant légèrement sur la pâte. Placer les derniers morceaux de pomme au centre de la tarte. Saupoudrer les pommes avec le reste du sucre, puis y incruster en petits morceaux le restant du beurre.",
+                "Cuire au four pendant environ 50–55 minutes, jusqu’à ce que la croûte soit dorée. Laisser refroidir au moins 15 minutes avant de servir."
+            ],
+            "source": "http://www.saveur.com/article/Recipes/Mamans-Apple-Tart"
+        }
+    ]
 }

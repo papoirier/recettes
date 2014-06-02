@@ -9,7 +9,9 @@
 #import "MainTableViewController.h"
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import "IngredientsTableViewController.h"
 #import "UIImage+ImageEffects.h"
+#import "UIViewController+NavBarAppearance.h"
 #import "Fonts.h"
 #import "AppUtils.h"
 
@@ -32,11 +34,7 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO]; // hide navigation bar
     [self.navigationController.navigationBar.topItem setTitle:@""];     // hide back button text
     
-    // hide the gray hairline below the nav bar
-    self.navigationController.toolbar.hidden = YES;
-    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    navBarHairlineImageView = [self findHairlineImageViewUnder:self.navigationController.navigationBar];
-    if(navBarHairlineImageView) navBarHairlineImageView.hidden = YES;
+    [self removeHairlineFromNavigationBar];
     
     // remove the extra cells
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -99,20 +97,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
-// getting rid of the hailine below the nav bar, on the pushed view
-- (UIImageView *)findHairlineImageViewUnder:(UIView *)view {
-    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
-        return (UIImageView *)view;
-    }
-    for (UIView *subview in view.subviews) {
-        UIImageView *imageView = [self findHairlineImageViewUnder:subview];
-        if (imageView) {
-            return imageView;
-        }
-    }
-    return nil;
-}
-
 // ---------------------------------------------------
 #pragma mark - NUMBER OF SECTIONS
 // ---------------------------------------------------
@@ -145,7 +129,6 @@
         cell = [[MainTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
     }
     
     // load the data in the cell, from the data loaded from the AppDelegate
@@ -159,13 +142,14 @@
     cell.recipeImageView.image = effectImage;
     
     // title
-    NSString * title = [recipesData objectForKey:@"title"];
+    NSString * titleKey = NSLocalizedString(@"title", nil);
+    NSLog(@"%@", titleKey);
+    NSString * title = [recipesData objectForKey:titleKey];
     cell.recipeTitleLabel.text = title;
     
     // subtitle
-    NSString * subtitle = [recipesData objectForKey:@"totalTime"];
+    NSString * subtitle = [recipesData objectForKey:@"total_time"];
     cell.recipeTotalTimeLabel.text = [NSString stringWithFormat:@"%@ minutes", subtitle];
-
 
     return cell;
 }
@@ -191,14 +175,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailViewController * dvc = [[DetailViewController alloc] init];
     NSDictionary * cellData = [data objectAtIndex:indexPath.row];
-    [dvc setDetail:cellData];  // 'detail' is a NSDictionary in DetailScrollView
     
+    DetailViewController * dvc = [[DetailViewController alloc] init];
+    [dvc setDetail:cellData]; // 'detail' is a NSDictionary in DetailViewController
     [self.navigationController pushViewController:dvc animated:YES];
     
+    /*
+    // test to populate table
+    NSArray * ingredients = [cellData objectForKey:NSLocalizedString(@"ingredients", nil)];
+    IngredientsTableViewController * itvc = [[IngredientsTableViewController alloc] initWithIngredients:ingredients];
+    [itvc setDetail:cellData];  // 'details' is a NSDictionary in IngredientsTableViewController
+    [self.navigationController pushViewController:itvc animated:YES];
+     */
 }
-
 
 // -----------------------------------------------------------------------
 #pragma mark - LONG PRESS GESTURE
@@ -206,7 +196,6 @@
 
 - (BOOL)longPressGesture:(UILongPressGestureRecognizer *)longPressRecognizer
 {
-    
     // -----------------------------------------------------------------------
     // began
     // -----------------------------------------------------------------------
@@ -269,9 +258,6 @@
         }
         [self saveData];
     }
-    
-    
-    
     return YES;
 }
 

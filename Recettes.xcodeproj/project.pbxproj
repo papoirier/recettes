@@ -34,6 +34,9 @@
 		5AB46EF8191BE695006BC0E6 /* BrownStd-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB46EF6191BE695006BC0E6 /* BrownStd-Italic.otf */; };
 		5AB46EFB191BE755006BC0E6 /* Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB46EFA191BE755006BC0E6 /* Fonts.m */; };
 		5AF9018C1937B7E400562162 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9018E1937B7E400562162 /* Localizable.strings */; };
+		5AF901921938C9EC00562162 /* IngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF901911938C9EC00562162 /* IngredientsTableViewController.m */; };
+		5AF9019719390F4400562162 /* IngredientsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9019619390F4400562162 /* IngredientsTableViewCell.m */; };
+		5AF9019A1939191300562162 /* UIViewController+NavBarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,12 @@
 		5AF9018B1937B7AD00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AF9018D1937B7E400562162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5AF9018F1937B82E00562162 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5AF901901938C9EC00562162 /* IngredientsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsTableViewController.h; sourceTree = "<group>"; };
+		5AF901911938C9EC00562162 /* IngredientsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsTableViewController.m; sourceTree = "<group>"; };
+		5AF9019519390F4400562162 /* IngredientsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsTableViewCell.h; sourceTree = "<group>"; };
+		5AF9019619390F4400562162 /* IngredientsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsTableViewCell.m; sourceTree = "<group>"; };
+		5AF901981939191300562162 /* UIViewController+NavBarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavBarAppearance.h"; sourceTree = "<group>"; };
+		5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavBarAppearance.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,14 +159,12 @@
 			children = (
 				5A63138D1917D36D00C35420 /* AppDelegate.h */,
 				5A63138E1917D36D00C35420 /* AppDelegate.m */,
-				5A6313B31917E29200C35420 /* MainTableViewController.h */,
-				5A6313B41917E29200C35420 /* MainTableViewController.m */,
-				5A1550B11919C0D400A73784 /* MainTableViewCell.h */,
-				5A1550B21919C0D400A73784 /* MainTableViewCell.m */,
-				5A6313D319196F9400C35420 /* DetailViewController.h */,
-				5A6313D419196F9400C35420 /* DetailViewController.m */,
+				5AF901981939191300562162 /* UIViewController+NavBarAppearance.h */,
+				5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */,
 				5AB46EF9191BE755006BC0E6 /* Fonts.h */,
 				5AB46EFA191BE755006BC0E6 /* Fonts.m */,
+				5AF901931938CA6C00562162 /* main recipes list */,
+				5AF901941938CA8700562162 /* single recipe */,
 				5A6313901917D36D00C35420 /* Main.storyboard */,
 				5AB46EFC191BF153006BC0E6 /* image blur */,
 				5A6313961917D36D00C35420 /* Images.xcassets */,
@@ -229,6 +236,30 @@
 				5A384D60191A887600ABC593 /* UIImage+ImageEffects.m */,
 			);
 			name = "image blur";
+			sourceTree = "<group>";
+		};
+		5AF901931938CA6C00562162 /* main recipes list */ = {
+			isa = PBXGroup;
+			children = (
+				5A6313B31917E29200C35420 /* MainTableViewController.h */,
+				5A6313B41917E29200C35420 /* MainTableViewController.m */,
+				5A1550B11919C0D400A73784 /* MainTableViewCell.h */,
+				5A1550B21919C0D400A73784 /* MainTableViewCell.m */,
+			);
+			name = "main recipes list";
+			sourceTree = "<group>";
+		};
+		5AF901941938CA8700562162 /* single recipe */ = {
+			isa = PBXGroup;
+			children = (
+				5A6313D319196F9400C35420 /* DetailViewController.h */,
+				5A6313D419196F9400C35420 /* DetailViewController.m */,
+				5AF901901938C9EC00562162 /* IngredientsTableViewController.h */,
+				5AF901911938C9EC00562162 /* IngredientsTableViewController.m */,
+				5AF9019519390F4400562162 /* IngredientsTableViewCell.h */,
+				5AF9019619390F4400562162 /* IngredientsTableViewCell.m */,
+			);
+			name = "single recipe";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,8 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF901921938C9EC00562162 /* IngredientsTableViewController.m in Sources */,
+				5AF9019A1939191300562162 /* UIViewController+NavBarAppearance.m in Sources */,
 				5A6313B51917E29200C35420 /* MainTableViewController.m in Sources */,
 				5A6313CD19189B2400C35420 /* AppUtils.m in Sources */,
+				5AF9019719390F4400562162 /* IngredientsTableViewCell.m in Sources */,
 				5A6313CE19189B2400C35420 /* PassthroughView.m in Sources */,
 				5AB46EFB191BE755006BC0E6 /* Fonts.m in Sources */,
 				5A63138F1917D36D00C35420 /* AppDelegate.m in Sources */,

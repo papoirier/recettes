@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IngredientsTableViewController.h"
 
 @interface DetailViewController : UIViewController
 {

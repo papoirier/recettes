@@ -10,7 +10,6 @@
 
 @interface MainTableViewCell : UITableViewCell {
     CGPoint  offset;
-    UIView * underCover;
 }
 
 @property (nonatomic, retain) UIImageView   * recipeImageView;

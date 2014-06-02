@@ -20,15 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // -----------------------------------------------------------------------
+    #pragma mark - NAVIGATION BAR
+    // -----------------------------------------------------------------------
     
-    // navigation bar
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]]; // color of all elements in nav bar
+    [[UINavigationBar appearance] setTitleTextAttributes: @{ NSFontAttributeName: BROWN_BOLD_18,
+                                                             NSForegroundColorAttributeName: [UIColor blackColor] }];
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:1.0 forBarMetrics:UIBarMetricsDefault]; // shifting the title's baseline by 1px
     
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor blackColor], NSForegroundColorAttributeName,
-                                                           BROWN_BOLD_18, NSFontAttributeName,
-                                                           nil]];
-    
+    // right button
+    NSDictionary * textAttributes = @{ NSFontAttributeName : BROWN_18,
+                                       NSForegroundColorAttributeName: [UIColor greenColor] };
+    [[UIBarButtonItem appearanceWhenContainedIn: [UINavigationController class],nil] setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
 
     // ---------------------------------------------------
     #pragma mark - LOADING THE DATA

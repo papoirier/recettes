@@ -1,0 +1,254 @@
+{
+    "lotte": [
+        {
+            "ingredients": [
+                {
+                    "name_fr": "Lotte",
+                    "quantity_fr": "0,5 kg",
+                    "name_en": "Monkfish",
+                    "quantity_en": "1 lb"
+                },
+                {
+                    "name_fr": "Champignons crimini",
+                    "quantity_fr": "470 g",
+                    "name_en": "Crimini mushrooms",
+                    "quantity_en": "2 cups"
+                },
+                {
+                    "name_fr": "Ail",
+                    "quantity_fr": "",
+                    "name_en": "Garlic",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Échalotte",
+                    "quantity_fr": "30 g",
+                    "name_en": "Shallot",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Bouillon de légumes",
+                    "quantity_fr": "50 ml",
+                    "name_en": "Vegetable broth",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Asperges",
+                    "quantity_fr": "8",
+                    "name_en": "Asparagus",
+                    "quantity_en": "8"
+                },
+                {
+                    "name_fr": "Gourganes",
+                    "quantity_fr": "120 g",
+                    "name_en": "Fava beans",
+                    "quantity_en": "½ cup"
+                },
+                {
+                    "name_fr": "Persil",
+                    "quantity_fr": "",
+                    "name_en": "Parsley",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Chipotle, moulu",
+                    "quantity_fr": "",
+                    "name_en": "Chipotle, ground",
+                    "quantity_en": ""
+                }
+            ],
+            "farro": [
+                {
+                    "name_fr": "Farro",
+                    "quantity_fr": "175 g",
+                    "name_en": "Farro",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Oignon, gros",
+                    "quantity_fr": "",
+                    "name_en": "Onion, large",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Ail",
+                    "quantity_fr": "2 gousses",
+                    "name_en": "Garlic",
+                    "quantity_en": "2 cloves"
+                },
+                {
+                    "name_fr": "Tomates cerise",
+                    "quantity_fr": "255 g",
+                    "name_en": "Cherry tomatoes",
+                    "quantity_en": "9 ounces"
+                },
+                {
+                    "name_fr": "Piment concassé",
+                    "quantity_fr": "5 g",
+                    "name_en": "Red pepper flakes",
+                    "quantity_en": "¼ tsp"
+                },
+                {
+                    "name_fr": "Sel de mer",
+                    "quantity_fr": "20 g",
+                    "name_en": "Sea salt",
+                    "quantity_en": "1 ¼ tsp"
+                },
+                {
+                    "name_fr": "Chipotle, moulu",
+                    "quantity_fr": "",
+                    "name_en": "Chipotle, ground",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Basilic",
+                    "quantity_fr": "",
+                    "name_en": "Basil",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Parmesan",
+                    "quantity_fr": "",
+                    "name_en": "Parmesan",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Huile d’olive",
+                    "quantity_fr": "",
+                    "name_en": "Olive oil",
+                    "quantity_en": ""
+                }
+            ],
+            "tart": [
+               {
+                    "name_fr": "Farine tout-usage",
+                    "quantity_fr": "145 g",
+                    "name_en": "All-purpose flour",
+                    "quantity_en": "1 ¼ cups"
+                },
+                {
+                    "name_fr": "Sucre",
+                    "quantity_fr": "45 g",
+                    "name_en": "Sugar",
+                    "quantity_en": "3 tbsp"
+                },
+                {
+                    "name_fr": "Poudre à pâte",
+                    "quantity_fr": "5,5 g",
+                    "name_en": "Baking powder",
+                    "quantity_en": "1 tsp"
+                },
+                {
+                    "name_fr": "Beurre non salé",
+                    "quantity_fr": "120 g",
+                    "name_en": "Unsalted butter",
+                    "quantity_en": "8 tbsp"
+                },
+                {
+                    "name_fr": "Lait",
+                    "quantity_fr": "30 ml",
+                    "name_en": "Milk",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Œuf",
+                    "quantity_fr": "1",
+                    "name_en": "Egg",
+                    "quantity_en": "1"
+                },
+                {
+                    "name_fr": "Pommes",
+                    "quantity_fr": "2 grosses",
+                    "name_en": "Apples",
+                    "quantity_en": "2 big"
+                },
+                {
+                    "name_fr": "Confiture",
+                    "quantity_fr": "optionnel",
+                    "name_en": "Jam",
+                    "quantity_en": "optionnal"
+                }
+            ],
+            "calamari": [
+                {
+                    "name_fr": "Couscous israélien",
+                    "quantity_fr": "170 g",
+                    "name_en": "Israeli couscous",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Calmars",
+                    "quantity_fr": "0,5 kg",
+                    "name_en": "Calamari",
+                    "quantity_en": "1 lb"
+                },
+                {
+                    "name_fr": "Ail",
+                    "quantity_fr": "2 gousses",
+                    "name_en": "Garlic",
+                    "quantity_en": "2 cloves"
+                },
+                {
+                    "name_fr": "Noix de pin",
+                    "quantity_fr": "20 g",
+                    "name_en": "Pine nuts",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Raisins de corinthe",
+                    "quantity_fr": "15 g",
+                    "name_en": "Currants",
+                    "quantity_en": "2 tbsp"
+                },
+                {
+                    "name_fr": "Piment concassé",
+                    "quantity_fr": "10 g",
+                    "name_en": "Red pepper flakes",
+                    "quantity_en": "1 tbsp"
+                },
+                {
+                    "name_fr": "Câpres (fleurs)",
+                    "quantity_fr": "50 g",
+                    "name_en": "Caperberries",
+                    "quantity_en": "¼ cup"
+                },
+                {
+                    "name_fr": "Vin blanc",
+                    "quantity_fr": "60 ml",
+                    "name_en": "White wine",
+                    "quantity_en": "¼ cup"
+                },
+                {
+                    "name_fr": "Sauce tomate",
+                    "quantity_fr": "240 ml",
+                    "name_en": "Tomato sauce",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Pesto amandes et jalapeño",
+                    "quantity_fr": "60 g",
+                    "name_en": "Jalapeño & almond pesto",
+                    "quantity_en": "3 tbsp"
+                },
+                {
+                    "name_fr": "Oignons verts",
+                    "quantity_fr": "3",
+                    "name_en": "Green onions",
+                    "quantity_en": "3"
+                },
+                {
+                    "name_fr": "Huile d’olive",
+                    "quantity_fr": "",
+                    "name_en": "Olive oil",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Parmesan",
+                    "quantity_fr": "",
+                    "name_en": "Parmesan",
+                    "quantity_en": ""
+                }
+            ]
+        }
+    ]
+}

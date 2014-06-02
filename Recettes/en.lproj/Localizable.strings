@@ -6,27 +6,38 @@
 
 
 // -----------------------------------------------------------------------
-// data
+// data - keys to the JSON file
 
-"json_data"     = "RecipesData";
+"json_data"         = "RecipesData";
+
+"title"             = "title_en";
+"short_title"       = "short_title_en";
+"directions"        = "directions_en";
+"ingredient_name"   = "name_en";
+"ingredient_qty"    = "quantity_en";
 
 
 // -----------------------------------------------------------------------
 // MainTableViewController
 
-"recipes"       = "Recipes";
+"recipes"           = "Recipes";
 
 // -----------------------------------------------------------------------
 // DetailViewController
 
-"ingredients"   = "Ingredients";
-"done"          = "Done";
-"preparation"   = "Preparation ";
-"total"         = "Total ";
-"inspired"      = "Inspired by";
+"ingredients_title" = "Ingredients";
+"directions_title"  = "Directions ";
+"done"              = "Done";
+"total"             = "Total ";
+"inspired"          = "Inspired by";
 
 // alert modal
-"alert_title"   = "Open Safari?";
-"message"       = "You will leave this app";
-"cancel_btn"    = "No";
-"other_btn"     = "Yes";
+"alert_title"       = "Open Safari?";
+"message"           = "You will leave this app";
+"cancel_btn"        = "No";
+"other_btn"         = "Yes";
+
+// -----------------------------------------------------------------------
+// IngredientsTableViewController
+
+"done"              = "Done";

@@ -23,4 +23,6 @@
 @property (nonatomic, retain) UIPanGestureRecognizer       * pan;
 @property (nonatomic, retain) UILongPressGestureRecognizer * longPress;
 
+- (void)loadData;
+
 @end

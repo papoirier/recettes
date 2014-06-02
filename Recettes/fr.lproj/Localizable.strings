@@ -8,25 +8,36 @@
 // -----------------------------------------------------------------------
 // data
 
-"json_data"     = "RecipesData";
+"json_data"         = "RecipesData";
+
+"title"             = "title_fr";
+"short_title"       = "short_title_fr";
+"directions"        = "directions_fr";
+"ingredient_name"   = "name_fr";
+"ingredient_qty"    = "quantity_fr";
 
 
 // -----------------------------------------------------------------------
 // MainTableViewController
 
-"recipes"       = "Recettes";
+"recipes"           = "Recettes";
 
 // -----------------------------------------------------------------------
 // DetailViewController
 
-"ingredients"   = "Ingrédients";
-"done"          = "Terminé";
-"preparation"   = "Préparation ";
-"total"         = "Total ";
-"inspired"      = "Inspiré par";
+"ingredients_title" = "Ingrédients";
+"directions_title"  = "Préparation ";
+"done"              = "Terminé";
+"total"             = "Total ";
+"inspired"          = "Inspiré par";
 
 // alert modal
-"alert_title"   = "Ouvrir Safari?";
-"message"       = "Vous allez quitter cette application";
-"cancel_btn"    = "Non";
-"other_btn"     = "Oui";
+"alert_title"       = "Ouvrir Safari?";
+"message"           = "Vous allez quitter cette application";
+"cancel_btn"        = "Non";
+"other_btn"         = "Oui";
+
+// -----------------------------------------------------------------------
+// IngredientsTableViewController
+
+"done"              = "Terminé";

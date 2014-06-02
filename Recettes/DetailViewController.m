@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "AppUtils.h"
 #import "Fonts.h"
+#import "MainTableViewController.h"
+#import "IngredientsTableViewController.h"
 
 @interface DetailViewController ()
 
@@ -25,7 +27,7 @@
 #define PADDING 5.0f
 #define PADDING_LABEL 10.0f
 
-float imageHeight, prepTimeHeight, ingredientsHeight, stepsHeight, authorHeight, sourceHeight, navBarHeight;
+float imageHeight, prepTimeHeight, ingredientsHeight, directionsHeight, authorHeight, sourceHeight, navBarHeight;
 float totalHeight;
 float rulePadHeight = 21.0;
 
@@ -37,8 +39,8 @@ float rulePadHeight = 21.0;
     self.view.backgroundColor = [UIColor whiteColor];
 
     // title
-    NSString * normalTitle = [detail objectForKey:@"title"];
-    NSString * shortTitle = [detail objectForKey:@"shortTitle"];
+    NSString * normalTitle = [detail objectForKey:NSLocalizedString(@"title", nil)];
+    NSString * shortTitle = [detail objectForKey:NSLocalizedString(@"short_title", nil)];
     shortTitle != nil ? [self setTitle:shortTitle] : [self setTitle:normalTitle];
     
     
@@ -46,6 +48,10 @@ float rulePadHeight = 21.0;
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController.navigationBar setTranslucent:YES];
+    
+    // right button
+    UIBarButtonItem * ingredientsListButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"ingredients_title", nil) style:UIBarButtonItemStylePlain target:self action:@selector(displayIngredientsList:)];
+    self.navigationItem.rightBarButtonItem = ingredientsListButton;
 
     
     // HEIGHTS
@@ -54,10 +60,9 @@ float rulePadHeight = 21.0;
     imageHeight         = HEIGHT/2;
     prepTimeHeight      = 40.0;
     ingredientsHeight   = 0;
-    stepsHeight         = 0;
+    directionsHeight    = 0;
     authorHeight        = 40.0;
     sourceHeight        = 40.0;
-    
     
     // SCROLL VIEW
     
@@ -76,15 +81,46 @@ float rulePadHeight = 21.0;
     
     [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
     
-    [self loadStepsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:stepsHeight];
+    [self loadDirectionsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:directionsHeight];
     
-    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+stepsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:sourceHeight];
+    [self loadSourceDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight+directionsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:sourceHeight];
     
-    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + stepsHeight + authorHeight -navBarHeight+rulePadHeight*2;
+    totalHeight = imageHeight + prepTimeHeight + ingredientsHeight + directionsHeight + authorHeight -navBarHeight+rulePadHeight*2;
     scrollView.contentSize = CGSizeMake(WIDTH, totalHeight);
     
 }
 
+// -----------------------------------------------------------------------
+#pragma mark - DISPLAY INGREDIENTS LIST
+// -----------------------------------------------------------------------
+
+- (void)displayIngredientsList:(id)sender
+{
+    // ingredient_name
+    // ingredient_qty
+
+//    
+    NSArray * ingredients = [detail objectForKey:@"ingredients"];
+    //NSLog(@"%@", ingredients);
+    
+    for (NSDictionary * ingredientNames in ingredients) {
+        NSString * name     = [ingredientNames objectForKey:NSLocalizedString(@"ingredient_name", nil)];
+        NSLog(@"%@", name);
+        NSString * quantity = [ingredientNames objectForKey:NSLocalizedString(@"ingredient_qty", nil)];
+        NSLog(@"%@", quantity);
+    }
+    
+
+    IngredientsTableViewController * itvc = [[IngredientsTableViewController alloc] initWithIngredients:ingredients];
+    
+    // adding the navigation controller
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:itvc];
+    //[nav setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+
+
+}
 
 
 // METHODS
@@ -142,7 +178,7 @@ float rulePadHeight = 21.0;
 
 - (void)loadPrepTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:NSLocalizedString(@"preparation", nil) andKey:@"prepTime" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:NSLocalizedString(@"directions_title", nil) andKey:@"prep_time" inTextView:prepTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -151,7 +187,7 @@ float rulePadHeight = 21.0;
 
 - (void)loadTotalTimeDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    [self timeTextWithRegularString:NSLocalizedString(@"total", nil) andKey:@"totalTime" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
+    [self timeTextWithRegularString:NSLocalizedString(@"total", nil) andKey:@"total_time" inTextView:totalTimeTextView withXPosition:rectXPosition andYPostition:rectYPosition andWidth:rectWidth andHeight:rectHeight];
 }
 
 // -----------------------------------------------------------------------
@@ -179,27 +215,22 @@ float rulePadHeight = 21.0;
     
     UITextView * ingredientsTextView = [[UITextView alloc] initWithFrame:ingredientsTextViewRect];
     
+
     NSArray * ingredients = [detail objectForKey:@"ingredients"];
-    NSArray * manyIngredients = [detail objectForKey:@"manyIngredients"];
+    //NSLog(@"ing: %@", ingredients);
     
-    if (manyIngredients != nil) {
+    if (ingredients != nil) {
         
         NSMutableAttributedString * mtbl = [[NSMutableAttributedString alloc] init];
         
-        for (NSDictionary * dict in manyIngredients) {
+        for (NSDictionary * dict in ingredients) {
             // title of multiple ingredient list
-            NSString * title    = [NSString stringWithFormat:@"%@\n", [dict objectForKey:@"title"]];
-            //NSString * title    = [NSString stringWithFormat:@"%@\n", [[dict objectForKey:@"title"] uppercaseString]];
-        
-            // list of multiple ingredients
-            NSArray  * ingred   = [dict objectForKey:@"ingredientList"];
-            NSString * ingredientListString = [NSString stringWithFormat:@"%@\n", [ingred componentsJoinedByString:@"\n"]];
+            NSString * theIngredient    = [NSString stringWithFormat:@"%@\n", [dict objectForKey:NSLocalizedString(@"ingredient_name", nil)]];
             
-            NSAttributedString * ingredientsAttributedString = [[NSAttributedString alloc] initWithString:ingredientListString attributes:ingredientsTextViewAttributes];
-            NSAttributedString * ingredientTitlesAttributedString = [[NSAttributedString alloc] initWithString:title attributes:titlesTextViewAttributes];
+
+            NSAttributedString * ingredientTitlesAttributedString = [[NSAttributedString alloc] initWithString:theIngredient attributes:titlesTextViewAttributes];
 
             [mtbl appendAttributedString:ingredientTitlesAttributedString];
-            [mtbl appendAttributedString:ingredientsAttributedString];
         }
         
         // now that we have the full string lets setup up the view
@@ -210,45 +241,35 @@ float rulePadHeight = 21.0;
         ingredientsHeight = ingredientsTextView.frame.size.height;
     }
     
-    else if (ingredients != nil) {
-        NSString * ingredientsString = [ingredients componentsJoinedByString:@"\n"];
-        NSAttributedString * ingredientsAttributedString = [[NSAttributedString alloc] initWithString:ingredientsString attributes:ingredientsTextViewAttributes];
-        ingredientsTextView.attributedText = ingredientsAttributedString;
-        [ingredientsTextView sizeToFit];
-        [ingredientsTextView actLikeTextLabel];
-        [scrollView addSubview:ingredientsTextView];
-        ingredientsHeight = ingredientsTextView.frame.size.height + rulePadHeight;
-    }
-    
     // rule
     [self addRuleWithXPosition:rectXPosition andYPostition:rectYPosition toView:scrollView];
 }
 
 // -----------------------------------------------------------------------
-#pragma mark - STEPS
+#pragma mark - DIRECTIONS
 // -----------------------------------------------------------------------
 
-- (void)loadStepsDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
+- (void)loadDirectionsDetailsWithXPosition:(CGFloat)rectXPosition andYPostition:(CGFloat)rectYPosition andWidth:(CGFloat)rectWidth andHeight:(CGFloat)rectHeight
 {
-    CGRect stepsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition + rulePadHeight, rectWidth - PADDING*2, rectHeight + rulePadHeight);
-    UITextView * stepsTextView = [[UITextView alloc] initWithFrame:stepsTextViewRect];
-    NSArray * steps = [detail objectForKey:@"steps"];
-    NSString * stepsString = [steps componentsJoinedByString:@"\n"];
+    CGRect directionsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition + rulePadHeight, rectWidth - PADDING*2, rectHeight + rulePadHeight);
+    UITextView * directionsTextView = [[UITextView alloc] initWithFrame:directionsTextViewRect];
+    NSArray * directions = [detail objectForKey:NSLocalizedString(@"directions", nil)];
+    NSString * directionsString = [directions componentsJoinedByString:@"\n"];
     
     NSMutableParagraphStyle * pStyle = [[NSMutableParagraphStyle alloc] init];
     pStyle.paragraphSpacing = 7.0;
     //pStyle.paragraphSpacingBefore = 0;
     pStyle.maximumLineHeight = 18.0 * 1.2;
     pStyle.headIndent = 0;
-    NSDictionary * stepsTextViewAttributes = @{NSFontAttributeName: BROWN_18, NSParagraphStyleAttributeName: pStyle};
-    NSAttributedString * stepsAttributedString = [[NSAttributedString alloc] initWithString:stepsString attributes:stepsTextViewAttributes];
+    NSDictionary * directionsTextViewAttributes = @{NSFontAttributeName: BROWN_18, NSParagraphStyleAttributeName: pStyle};
+    NSAttributedString * directionsAttributedString = [[NSAttributedString alloc] initWithString:directionsString attributes:directionsTextViewAttributes];
     
-    stepsTextView.attributedText = stepsAttributedString;
-    [stepsTextView sizeToFit];
-    [stepsTextView actLikeTextLabel];
-    [scrollView addSubview:stepsTextView];
+    directionsTextView.attributedText = directionsAttributedString;
+    [directionsTextView sizeToFit];
+    [directionsTextView actLikeTextLabel];
+    [scrollView addSubview:directionsTextView];
     
-    stepsHeight = stepsTextView.frame.size.height + rulePadHeight;
+    directionsHeight = directionsTextView.frame.size.height + rulePadHeight;
     
 //    CGRect rulePad = CGRectMake(rectXPosition, rectYPosition, WIDTH, rulePadHeight);
 //    UIView * rulePadView = [[UIView alloc] initWithFrame:rulePad];
