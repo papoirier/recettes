@@ -256,8 +256,8 @@
                 "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
             ],
             "directions_en": [
-                "Faire bouillir 3 litres d’eau, puis saler. Faire cuire le couscous pendant 2 minutes, drainer l’eau, puis verser le dans un bassin d’eau glacée. Une fois refroidi, retirer le couscous de l’eau froide et placer sur une assiette afin qu’il sèche.",
-                "Dans une sauteuse, faire chauffer l’huile d’olive jusqu’à ce qu’elle commencer à fumer. Ajouter les noix de pin, raisins de corinthe et le piment broyé et faire sauter pendant environ 2 minutes, jusqu’à ce que les noix commencent à dorer. Ajouter le couscous, la sauce tomate, les câpres et le vin et porter à ébullition. Ajouter les calmars et les parties blanches des oignons verts, remuer et laisser mijoter pendant 2–3 minutes ou jusqu’à temps que les calmars soient à peine cuits et entièrement opaques. Assaisonner de poivre et sel, verser dans des bols, ajouter un filet d’huile d’olive et saupoudrer des parties vertes des oignons verts. Servir immédiatement."
+                "Bring 3 quarts of water to a boil and add 1 tablespoon of salt. Set up an ice bath nearby. Cook the couscous in the boiling water for 2 minutes, then drain and immediately plunge it into the ice bath. Once cooled, remove and set aside to dry on a plate.",
+                "In a 12- to 14-inch sauté pan, heat the olive oil until just smoking. Add the pine nuts, currants, and red pepper flakes, if desired, and sauté until the nuts are just golden brown, about 2 minutes. Add the caperberries, tomato sauce, wine, and couscous and bring to a boil. Add the calamari and scallion whites, stir to combine, and simmer for 2 to 3 minutes, or until the calamari is just cooked and completely opaque. Season with salt and pepper, drizzle with olive oil, pour into a large bowl, sprinkle with scallion greens, and serve immediately."
             ],
             "source": "http://www.aveceric.com/twominute-calamari-sicilian-lifeguard-style/"
         },
@@ -325,11 +325,170 @@
                 "Cuire au four pendant environ 50–55 minutes, jusqu’à ce que la croûte soit dorée. Laisser refroidir au moins 15 minutes avant de servir."
             ],
             "directions_en": [
-                "Pré-chauffer le four à 190˚C (375˚F). Dans un grand bol, mélanger la farine, 1 cuillère à table de sucre, la poudre à pâte et le sel. Ajouter 6 cuillères à table de beurre, puis, avec vos doigts, incorporer dans le mélange de farine afin de grossièrement former des amoncellements de la taille de petits pois. Ajouter le lait et l'œuf et mélanger avec une cuillère en bois jusqu'à ce que que la pâte soit à peine formée. Terminer la formation de la pâte avec vos mains. Transférer la pâte dans une assiette à tarte en verre (20–25 cm) puis, avec des doigts légèrement farinés, presser la pâte sur les fond et les parois de l'assiette. Réfrigérer 30 minutes.",
-                "De manière concentrique, étaler les morceaux de pomme côte-à-côte sur le fond de l’assiette à tarte en appuyant légèrement sur la pâte. Placer les derniers morceaux de pomme au centre de la tarte. Saupoudrer les pommes avec le reste du sucre, puis y incruster en petits morceaux le restant du beurre.",
-                "Cuire au four pendant environ 50–55 minutes, jusqu’à ce que la croûte soit dorée. Laisser refroidir au moins 15 minutes avant de servir."
+                "Heat oven to 375°. In a large bowl, whisk together flour, 1 tbsp. sugar, baking powder, and salt. Add 3 tbsp. butter and the shortening and, using your fingers, rub into flour mixture to form coarse pea-size pieces. Add milk and egg and stir with a wooden spoon until just combined. Bring dough together with your hands. Transfer dough to a 9\" glass pie plate and, using lightly floured fingers, press dough into bottom and sides; refrigerate for 30 minutes.",
+                "Arrange apple wedges side by side on bottom of pie plate like the spokes of a wheel, pushing gently into the dough as you go. Halve remaining apples and put in middle of tart. Sprinkle apples with remaining sugar and dot with the remaining chilled butter. Bake until the crust is golden, about 45 minutes. Using a pastry brush, brush apricot preserves over the tart and bake for 10 minutes more. Let cool for at least 15 minutes before serving."
             ],
             "source": "http://www.saveur.com/article/Recipes/Mamans-Apple-Tart"
+        },
+        {
+            "title_fr": "Salade de rubans d'asperges",
+            "title_en": "Asparagus ribbon salad",
+            "short_title": "",
+            "author": "Sarah Britton",
+            "image": "asparagus.png",
+            "prep_time": "20",
+            "total_time": "70",
+            "ingredients": [
+                {
+                    "name_fr": "Asperges",
+                    "quantity_fr": "bouquet",
+                    "name_en": "Asparagus",
+                    "quantity_en": "bunch"
+                },
+                {
+                    "name_fr": "Roquette",
+                    "quantity_fr": "",
+                    "name_en": "Arugula",
+                    "quantity_en": "2 cups"
+                },
+                {
+                    "name_fr": "Noisettes, tranchés",
+                    "quantity_fr": "",
+                    "name_en": "Hazelnuts, chopped",
+                    "quantity_en": "¼ cups"
+                },
+                {
+                    "name_fr": "Pecorino Romano",
+                    "quantity_fr": "",
+                    "name_en": "Pecorino Romano",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Huile d’olive",
+                    "quantity_fr": "",
+                    "name_en": "Olive oil",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Citron",
+                    "quantity_fr": "",
+                    "name_en": "Lemon",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Échalotte",
+                    "quantity_fr": "",
+                    "name_en": "Shallot",
+                    "quantity_en": ""
+                },
+                {
+                    "name_fr": "Miel",
+                    "quantity_fr": "",
+                    "name_en": "Honey",
+                    "quantity_en": ""
+                }
+            ],
+            "directions_fr": [
+                "",
+                ""
+            ],
+            "directions_en": [
+                "Using a vegetable peeler, start from the top of the spear, and gently shave downward, to create a thin ribbon. Continue until you only have a small piece of the spear left, then run a small paring knife down the middle to separate. Slice all of the tips in half, lengthwise. (Don’t worry about being perfect; it’s meant to be rustic!) Transfer the asparagus ribbons in a large bowl and set aside.",
+                "Combine dressing ingredients in a jar covered with a tight-fitting lid and shake to combine. Taste to adjust seasoning. Toss asparagus with the dressing until fully coated. Let marinate for 15 to 20 minutes.",
+                "Toss the marinated asparagus with the arugula (it will still take on some of the dressing).",
+                "Sprinkle the asparagus-arugula mixture with the hazelnuts and many grinds of fresh black pepper (it really adds a lot to this dish!). Top with a few shavings of Pecorino Romano, if using. Serve."
+            ],
+            "source": "http://www.mynewroots.org/site/2011/05/meatless-mondays-with-martha-stewart-asparagus-ribbon-salad-3/"
+        },
+        {
+            "title_fr": "Muffins aux courgettes",
+            "title_en": "Zucchini muffins",
+            "short_title": "",
+            "author": "Roger",
+            "image": "zucchini-muffins.png",
+            "prep_time": "30",
+            "total_time": "50",
+            "ingredients": [
+                {
+                    "name_fr": "Courgettes, râpées",
+                    "quantity_fr": "400 g",
+                    "name_en": "Zucchini, shredded",
+                    "quantity_en": "3 cups"
+                },
+                {
+                    "name_fr": "Sucre",
+                    "quantity_fr": "170 g",
+                    "name_en": "Sugar",
+                    "quantity_en": "1 ¾ cups"
+                },
+                {
+                    "name_fr": "Noix de grenoble, hachées",
+                    "quantity_fr": "125 g",
+                    "name_en": "Walnuts, chopped",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Huile de canola",
+                    "quantity_fr": "250 ml",
+                    "name_en": "Canola oil",
+                    "quantity_en": "1 cup"
+                },
+                {
+                    "name_fr": "Œufs",
+                    "quantity_fr": "4",
+                    "name_en": "Eggs",
+                    "quantity_en": "4"
+                },
+                {
+                    "name_fr": "Farine à pâtisserie",
+                    "quantity_fr": "525 g",
+                    "name_en": "Pastry flour",
+                    "quantity_en": "3 cups"
+                },
+                {
+                    "name_fr": "Poudre à pâte",
+                    "quantity_fr": "5 g",
+                    "name_en": "Baking powder",
+                    "quantity_en": "2 tsp"
+                },
+                {
+                    "name_fr": "Cannelle",
+                    "quantity_fr": "0,5 g",
+                    "name_en": "Cinnamon",
+                    "quantity_en": "½ tsp"
+                },
+                {
+                    "name_fr": "Gingembre",
+                    "quantity_fr": "10 g",
+                    "name_en": "Ginger",
+                    "quantity_en": "1–2 tbsp"
+                },
+                {
+                    "name_fr": "Bicarbonate de soude",
+                    "quantity_fr": "3 g",
+                    "name_en": "Baking soda",
+                    "quantity_en": "1 tsp"
+                },
+                {
+                    "name_fr": "Sel",
+                    "quantity_fr": "1 g",
+                    "name_en": "Salt",
+                    "quantity_en": "¼ tsp"
+                }
+            ],
+            "directions_fr": [
+                "Préchauffer le four à 190°C (375°F)",
+                "Dans un bol, mélanger ensemble les ingrédients secs : sucre, farine à pâtisserie, poudre à pâte, sel, cannelle et bicarbonate de soude.",
+                "Dans un autre bol, battre légèrement les œufs. Ajouter au premier mélange.",
+                "Ajouter les courgettes, les noix et l'huile. Mélanger.",
+                "Verser dans des moules à muffins préalablement graissés.",
+                "Cuire à 190°C environ 20 minutes."
+            ],
+            "directions_en": [
+                "",
+                ""
+            ],
+            "source": "http://www.recettes.qc.ca/recette/muffins-aux-courgettes-zucchinis-2963"
         }
     ]
 }

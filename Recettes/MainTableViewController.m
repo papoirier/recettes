@@ -41,14 +41,21 @@
     
     // initializing gestures
     longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
-    [self.view addGestureRecognizer:longPress];
+    [self.tableView addGestureRecognizer:longPress];
 
     pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
-    [self.view addGestureRecognizer:pan];
+    
+    [self.navigationController.view addGestureRecognizer:pan];
+    
+    
+    //[self.tableView.panGestureRecognizer requireGestureRecognizerToFail:pan];
+    
     
     cellRef = nil;
     
 }
+
+// -----------------------------------------------------------------------
 
 - (void)didReceiveMemoryWarning
 {
@@ -247,6 +254,7 @@
     return YES;
 }
 
+/*
 // -----------------------------------------------------------------------
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -267,6 +275,7 @@
 {
     return YES;
 }
+ */
 
 // -----------------------------------------------------------------------
 
@@ -277,7 +286,6 @@
     [data insertObject:draggedData atIndex:destinationIndexPath.row];
     [self saveData];
 }
-
 
 // -----------------------------------------------------------------------
 #pragma mark - PANNING GESTURE
@@ -331,7 +339,7 @@
         
         cellRef.underCover.alpha = openCellAlpha/w;
         cellRef.underCoverLabel.alpha = openCellAlpha/w;
-        NSLog(@"cell alpha: %f", cellRef.underCover.alpha);
+        //NSLog(@"cell alpha: %f", cellRef.underCover.alpha);
         
         // clamping so it doesn't go left past 0
         if (originalFrame.origin.x < 0) {

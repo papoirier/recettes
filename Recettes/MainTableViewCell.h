@@ -22,7 +22,7 @@
 @property (nonatomic, retain) UIView        * cover;
 @property (nonatomic, retain) UILabel       * underCoverLabel;
 
-#define CELL_HEIGHT 90
+#define CELL_HEIGHT 100
 #define VOMIT_COLOR [UIColor colorWithRed:1 green:0.5 blue:0.2 alpha:0.5]
 
 @end

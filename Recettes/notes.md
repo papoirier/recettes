@@ -23,7 +23,7 @@
 - Units: imperial or metric
 - Localization: français and english
 - Walkthrough / tutorial on how to use the app
-- Dynamic type
+- `Dynamic type`
 
 ### New
 - Create new recipe
