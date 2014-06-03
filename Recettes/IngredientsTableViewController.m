@@ -63,23 +63,26 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
+// -----------------------------------------------------------------------
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
-// -----------------------------------------------------------------------
-
-#pragma mark - Table view data source
+// ---------------------------------------------------
+#pragma mark - NUMBER OF SECTIONS
+// ---------------------------------------------------
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return data ? 1 : 0;
 }
 
-// -----------------------------------------------------------------------
+// ---------------------------------------------------
+#pragma mark - NUMBER OF ROWS IN SECTIONS
+// ---------------------------------------------------
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -104,6 +107,8 @@
     NSDictionary * theIngredient = [data objectAtIndex:indexPath.row];
     NSString * name     = [theIngredient objectForKey:NSLocalizedString(@"ingredient_name", nil)];
     NSString * quantity = [theIngredient objectForKey:NSLocalizedString(@"ingredient_qty", nil)];
+    
+    NSLog(@"%ld, %@", (long)indexPath.row, name);
     
     cell.ingredientNameLabel.text = name;
     cell.ingredientQuantityLabel.text = quantity;

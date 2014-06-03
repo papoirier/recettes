@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MainTableViewCell.h"
 
-@interface MainTableViewController : UITableViewController <UIScrollViewDelegate>
+@interface MainTableViewController : UITableViewController
 {
     UIImageView       * navBarHairlineImageView;
     CGPoint             offset;

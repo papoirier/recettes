@@ -40,12 +40,11 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     // initializing gestures
-    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
-    [self.tableView addGestureRecognizer:longPress];
-
-    pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
-    
-    [self.navigationController.view addGestureRecognizer:pan];
+//    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
+//    [self.tableView addGestureRecognizer:longPress];
+//
+//    pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
+//    [self.navigationController.view addGestureRecognizer:pan];
     
     
     //[self.tableView.panGestureRecognizer requireGestureRecognizerToFail:pan];
@@ -136,27 +135,26 @@
         cell = [[MainTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        // load the data in the cell, from the data loaded from the AppDelegate
+        NSDictionary * recipesData = [data objectAtIndex:indexPath.row];
+        
+        // image
+        NSString * image = [recipesData objectForKey:@"image"];
+        cell.recipeImageView.image = [UIImage imageNamed:image];
+        UIImage *effectImage = nil;
+        effectImage = [cell.recipeImageView.image applyLightEffectWithBlurRadius:10];
+        cell.recipeImageView.image = effectImage;
+        
+        // title
+        NSString * titleKey = NSLocalizedString(@"title", nil);
+        NSString * title = [recipesData objectForKey:titleKey];
+        cell.recipeTitleLabel.text = title;
+        
+        // subtitle
+        NSString * subtitle = [recipesData objectForKey:@"total_time"];
+        cell.recipeTotalTimeLabel.text = [NSString stringWithFormat:@"%@ minutes", subtitle];
     }
-    
-    // load the data in the cell, from the data loaded from the AppDelegate
-    NSDictionary * recipesData = [data objectAtIndex:indexPath.row];
-    
-    // image
-    NSString * image = [recipesData objectForKey:@"image"];
-    cell.recipeImageView.image = [UIImage imageNamed:image];
-    UIImage *effectImage = nil;
-    effectImage = [cell.recipeImageView.image applyLightEffectWithBlurRadius:10];
-    cell.recipeImageView.image = effectImage;
-    
-    // title
-    NSString * titleKey = NSLocalizedString(@"title", nil);
-    NSString * title = [recipesData objectForKey:titleKey];
-    cell.recipeTitleLabel.text = title;
-    
-    // subtitle
-    NSString * subtitle = [recipesData objectForKey:@"total_time"];
-    cell.recipeTotalTimeLabel.text = [NSString stringWithFormat:@"%@ minutes", subtitle];
-
     return cell;
 }
 
