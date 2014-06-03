@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MainTableViewCell.h"
 
-@interface MainTableViewController : UITableViewController
-{
-    UIImageView       * navBarHairlineImageView;
+@interface MainTableViewController : UITableViewController {
     CGPoint             offset;
-    CGPoint             longOffset;
     MainTableViewCell * cellRef;
-    
-    NSIndexPath * sourceIndex;
-    UIBezierPath * shadowPath;
+    NSIndexPath       * sourceIndex;
+    UIBezierPath      * shadowPath;
 }
 
 @property (nonatomic, retain) NSMutableArray               * data;

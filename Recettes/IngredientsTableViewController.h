@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IngredientsTableViewCell.h"
 
-@interface IngredientsTableViewController : UITableViewController
+@interface IngredientsTableViewController : UITableViewController {
+    CGPoint                    offset;
+    IngredientsTableViewCell * cellRef;
+        NSIndexPath          * sourceIndex;
+}
 
-- (id)initWithIngredients:(NSArray *)ingredients;
+@property (nonatomic, retain) NSMutableArray         * data;
+@property (nonatomic, retain) UIPanGestureRecognizer * pan;
 
-@property (nonatomic, retain) NSArray * data;
+- (id)initWithIngredients:(NSMutableArray *)ingredients;
 
 @end

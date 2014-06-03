@@ -96,7 +96,7 @@ float rulePadHeight = 21.0;
 
 - (void)displayIngredientsList:(id)sender
 {
-    NSArray * ingredients = [detail objectForKey:@"ingredients"];
+    NSMutableArray * ingredients = [detail objectForKey:@"ingredients"];
     IngredientsTableViewController * itvc = [[IngredientsTableViewController alloc] initWithIngredients:ingredients];
     
     // adding the navigation controller

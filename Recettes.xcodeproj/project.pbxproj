@@ -30,6 +30,7 @@
 		5A6313CE19189B2400C35420 /* PassthroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313CA19189B2400C35420 /* PassthroughView.m */; };
 		5A6313CF19189B2400C35420 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A6313CB19189B2400C35420 /* README.md */; };
 		5A6313D519196F9400C35420 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6313D419196F9400C35420 /* DetailViewController.m */; };
+		5A6341B4193E5D8100EE4DFF /* UIViewController+Pan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6341B3193E5D8100EE4DFF /* UIViewController+Pan.m */; };
 		5AB46EF7191BE695006BC0E6 /* BrownStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB46EF5191BE695006BC0E6 /* BrownStd-Bold.otf */; };
 		5AB46EF8191BE695006BC0E6 /* BrownStd-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB46EF6191BE695006BC0E6 /* BrownStd-Italic.otf */; };
 		5AB46EFB191BE755006BC0E6 /* Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB46EFA191BE755006BC0E6 /* Fonts.m */; };
@@ -83,6 +84,8 @@
 		5A6313CB19189B2400C35420 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5A6313D319196F9400C35420 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		5A6313D419196F9400C35420 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5A6341B2193E5D8100EE4DFF /* UIViewController+Pan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Pan.h"; sourceTree = "<group>"; };
+		5A6341B3193E5D8100EE4DFF /* UIViewController+Pan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Pan.m"; sourceTree = "<group>"; };
 		5AB46EF5191BE695006BC0E6 /* BrownStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrownStd-Bold.otf"; sourceTree = "<group>"; };
 		5AB46EF6191BE695006BC0E6 /* BrownStd-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrownStd-Italic.otf"; sourceTree = "<group>"; };
 		5AB46EF9191BE755006BC0E6 /* Fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fonts.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 			children = (
 				5AF901981939191300562162 /* UIViewController+NavBarAppearance.h */,
 				5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */,
+				5A6341B2193E5D8100EE4DFF /* UIViewController+Pan.h */,
+				5A6341B3193E5D8100EE4DFF /* UIViewController+Pan.m */,
 				5AB46EF9191BE755006BC0E6 /* Fonts.h */,
 				5AB46EFA191BE755006BC0E6 /* Fonts.m */,
 			);
@@ -381,6 +386,7 @@
 				5A6313CD19189B2400C35420 /* AppUtils.m in Sources */,
 				5AF9019719390F4400562162 /* IngredientsTableViewCell.m in Sources */,
 				5A6313CE19189B2400C35420 /* PassthroughView.m in Sources */,
+				5A6341B4193E5D8100EE4DFF /* UIViewController+Pan.m in Sources */,
 				5AB46EFB191BE755006BC0E6 /* Fonts.m in Sources */,
 				5A63138F1917D36D00C35420 /* AppDelegate.m in Sources */,
 				5A384D61191A887600ABC593 /* UIImage+ImageEffects.m in Sources */,

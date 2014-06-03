@@ -46,10 +46,6 @@
     pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
     [self.navigationController.view addGestureRecognizer:pan];
     
-    
-    //[self.tableView.panGestureRecognizer requireGestureRecognizerToFail:pan];
-    
-    
     cellRef = nil;
     
 }
@@ -252,29 +248,8 @@
     return YES;
 }
 
-/*
 // -----------------------------------------------------------------------
-
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellEditingStyleNone;
-}
-
-// -----------------------------------------------------------------------
-
-- (BOOL)tableView:(UITableView *)tableview shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return NO;
-}
-
-// -----------------------------------------------------------------------
-
--(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
- */
-
+#pragma mark - DATA SAVING STUFF
 // -----------------------------------------------------------------------
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
@@ -304,7 +279,6 @@
             NSIndexPath * pannedIndexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
             MainTableViewCell * cell = (MainTableViewCell *)[self.tableView cellForRowAtIndexPath:pannedIndexPath];
             if(cell) {
-                
                 // set the touch offset
                 offset = touchPoint;
                 offset.x -= cell.cover.frame.origin.x;
@@ -324,7 +298,6 @@
     // changed ( and we have a cellRef )
     // -----------------------------------------------------------------------
     if(recognizer.state == UIGestureRecognizerStateChanged && cellRef != nil) {
-        
         CGRect originalFrame = cellRef.frame;
         float newX = touchPoint.x - offset.x;
         originalFrame.origin = CGPointMake(newX, 0);
@@ -337,7 +310,6 @@
         
         cellRef.underCover.alpha = openCellAlpha/w;
         cellRef.underCoverLabel.alpha = openCellAlpha/w;
-        //NSLog(@"cell alpha: %f", cellRef.underCover.alpha);
         
         // clamping so it doesn't go left past 0
         if (originalFrame.origin.x < 0) {
@@ -412,7 +384,6 @@
 #pragma mark - close the cell
 // -----------------------------------------------------------------------
 - (void)closeCell:(MainTableViewCell *)cell onComplete:(BasicBlock)callback
-
 {
     [MainTableViewCell animateWithDuration:0.25
                           delay:0
