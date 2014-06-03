@@ -16,6 +16,6 @@
 @property (nonatomic, retain) UIView        * cover;
 @property (nonatomic, retain) UILabel       * underCoverLabel;
 
-#define INGREDIENT_CELL_HEIGHT 44
+#define INGREDIENT_CELL_HEIGHT 60
 
 @end

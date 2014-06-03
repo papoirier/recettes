@@ -79,7 +79,7 @@ float rulePadHeight = 21.0;
     
     [self loadTotalTimeDetailsWithXPosition:(WIDTH/2)+PADDING andYPostition:imageHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH/2 andHeight:prepTimeHeight];
     
-    [self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
+    //[self loadIngredientDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:ingredientsHeight];
     
     [self loadDirectionsDetailsWithXPosition:0 andYPostition:imageHeight+prepTimeHeight+ingredientsHeight-navBarHeight+PADDING_LABEL andWidth:WIDTH andHeight:directionsHeight];
     
@@ -96,21 +96,7 @@ float rulePadHeight = 21.0;
 
 - (void)displayIngredientsList:(id)sender
 {
-    // ingredient_name
-    // ingredient_qty
-
-//    
     NSArray * ingredients = [detail objectForKey:@"ingredients"];
-    //NSLog(@"%@", ingredients);
-    
-    for (NSDictionary * ingredientNames in ingredients) {
-        NSString * name     = [ingredientNames objectForKey:NSLocalizedString(@"ingredient_name", nil)];
-        NSLog(@"%@", name);
-        NSString * quantity = [ingredientNames objectForKey:NSLocalizedString(@"ingredient_qty", nil)];
-        NSLog(@"%@", quantity);
-    }
-    
-
     IngredientsTableViewController * itvc = [[IngredientsTableViewController alloc] initWithIngredients:ingredients];
     
     // adding the navigation controller
@@ -118,8 +104,6 @@ float rulePadHeight = 21.0;
     //[nav setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     
     [self.navigationController presentViewController:nav animated:YES completion:nil];
-
-
 }
 
 
@@ -208,17 +192,13 @@ float rulePadHeight = 21.0;
     ingredientsTitleParagraphStyle.maximumLineHeight = 18.0 * 1.2;
     ingredientsTitleParagraphStyle.headIndent = 0;
     
-    NSDictionary * ingredientsTextViewAttributes = @{NSFontAttributeName: BROWN_18, NSParagraphStyleAttributeName: ingredientsParagraphStyle};
     NSDictionary * titlesTextViewAttributes = @{NSFontAttributeName: BROWN_BOLD_18, NSParagraphStyleAttributeName: ingredientsTitleParagraphStyle};
 
     CGRect ingredientsTextViewRect = CGRectMake(rectXPosition + PADDING, rectYPosition + rulePadHeight, rectWidth - PADDING*2, rectHeight + rulePadHeight);
-    
     UITextView * ingredientsTextView = [[UITextView alloc] initWithFrame:ingredientsTextViewRect];
-    
 
     NSArray * ingredients = [detail objectForKey:@"ingredients"];
-    //NSLog(@"ing: %@", ingredients);
-    
+ 
     if (ingredients != nil) {
         
         NSMutableAttributedString * mtbl = [[NSMutableAttributedString alloc] init];
@@ -226,10 +206,8 @@ float rulePadHeight = 21.0;
         for (NSDictionary * dict in ingredients) {
             // title of multiple ingredient list
             NSString * theIngredient    = [NSString stringWithFormat:@"%@\n", [dict objectForKey:NSLocalizedString(@"ingredient_name", nil)]];
-            
-
             NSAttributedString * ingredientTitlesAttributedString = [[NSAttributedString alloc] initWithString:theIngredient attributes:titlesTextViewAttributes];
-
+            
             [mtbl appendAttributedString:ingredientTitlesAttributedString];
         }
         
@@ -293,9 +271,6 @@ float rulePadHeight = 21.0;
     UILabel * authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 72, rectHeight)];
     authorLabel.text = [NSString stringWithFormat:NSLocalizedString(@"inspired", nil)];
     authorLabel.font = BROWN_14;
-    //[authorLabel sizeToFit];
-    //[authorView setBackgroundColor:[UIColor orangeColor]];
-    //[authorLabel setBackgroundColor:[UIColor blueColor]];
     [authorView addSubview:authorLabel];
     [scrollView addSubview:authorView];
     

@@ -124,6 +124,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A2CB172193D230700ADA40A /* global */ = {
+			isa = PBXGroup;
+			children = (
+				5AF901981939191300562162 /* UIViewController+NavBarAppearance.h */,
+				5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */,
+				5AB46EF9191BE755006BC0E6 /* Fonts.h */,
+				5AB46EFA191BE755006BC0E6 /* Fonts.m */,
+			);
+			name = global;
+			sourceTree = "<group>";
+		};
 		5A6313721917D36D00C35420 = {
 			isa = PBXGroup;
 			children = (
@@ -159,12 +170,9 @@
 			children = (
 				5A63138D1917D36D00C35420 /* AppDelegate.h */,
 				5A63138E1917D36D00C35420 /* AppDelegate.m */,
-				5AF901981939191300562162 /* UIViewController+NavBarAppearance.h */,
-				5AF901991939191300562162 /* UIViewController+NavBarAppearance.m */,
-				5AB46EF9191BE755006BC0E6 /* Fonts.h */,
-				5AB46EFA191BE755006BC0E6 /* Fonts.m */,
 				5AF901931938CA6C00562162 /* main recipes list */,
 				5AF901941938CA8700562162 /* single recipe */,
+				5A2CB172193D230700ADA40A /* global */,
 				5A6313901917D36D00C35420 /* Main.storyboard */,
 				5AB46EFC191BF153006BC0E6 /* image blur */,
 				5A6313961917D36D00C35420 /* Images.xcassets */,

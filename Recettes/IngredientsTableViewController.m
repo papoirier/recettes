@@ -26,7 +26,6 @@
     self = [super init];
     if (self) {
         data = ingredients;
-        NSLog(@"%@", ingredients);
     }
     return self;
 }
@@ -98,6 +97,7 @@
     
     if (cell == nil) {
         cell = [[IngredientsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     //indexPath.row
@@ -111,6 +111,14 @@
     return cell;
 }
 
+// -----------------------------------------------------------------------
+#pragma mark - CELL HEIGHT
+// -----------------------------------------------------------------------
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return INGREDIENT_CELL_HEIGHT;
+}
 
 
 @end

@@ -62,12 +62,12 @@
 - (void)loadData
 {
     NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
-    NSData * savedData = [defs objectForKey:@"data"];
+    NSData * savedData = [defs objectForKey:@"recipes"];
     
     if(savedData == nil) {
         data = [AppDelegate getAppInstance].allRecipesData; // loading the data from the AppDelegate
         NSData * saveThisData = [NSKeyedArchiver archivedDataWithRootObject:data];
-        [defs setObject:saveThisData forKey:@"data"];
+        [defs setObject:saveThisData forKey:@"recipes"];
         [defs synchronize];
     }
     else {
@@ -82,7 +82,7 @@
 - (void)saveData {
     NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
     NSData * saveThisData = [NSKeyedArchiver archivedDataWithRootObject:data];
-    [defs setObject:saveThisData forKey:@"data"];
+    [defs setObject:saveThisData forKey:@"recipes"];
     [defs synchronize];
 }
 
@@ -143,7 +143,6 @@
     
     // title
     NSString * titleKey = NSLocalizedString(@"title", nil);
-    NSLog(@"%@", titleKey);
     NSString * title = [recipesData objectForKey:titleKey];
     cell.recipeTitleLabel.text = title;
     
@@ -163,11 +162,6 @@
     return CELL_HEIGHT;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [cell setBackgroundColor:[UIColor clearColor]];
-}
-
 
 // ---------------------------------------------------
 #pragma mark - PUSH TO POST DETAILS CELL
@@ -180,14 +174,6 @@
     DetailViewController * dvc = [[DetailViewController alloc] init];
     [dvc setDetail:cellData]; // 'detail' is a NSDictionary in DetailViewController
     [self.navigationController pushViewController:dvc animated:YES];
-    
-    /*
-    // test to populate table
-    NSArray * ingredients = [cellData objectForKey:NSLocalizedString(@"ingredients", nil)];
-    IngredientsTableViewController * itvc = [[IngredientsTableViewController alloc] initWithIngredients:ingredients];
-    [itvc setDetail:cellData];  // 'details' is a NSDictionary in IngredientsTableViewController
-    [self.navigationController pushViewController:itvc animated:YES];
-     */
 }
 
 // -----------------------------------------------------------------------
