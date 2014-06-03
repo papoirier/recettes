@@ -40,11 +40,11 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     // initializing gestures
-//    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
-//    [self.tableView addGestureRecognizer:longPress];
-//
-//    pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
-//    [self.navigationController.view addGestureRecognizer:pan];
+    longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGesture:)];
+    [self.tableView addGestureRecognizer:longPress];
+
+    pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandler:)];
+    [self.navigationController.view addGestureRecognizer:pan];
     
     
     //[self.tableView.panGestureRecognizer requireGestureRecognizerToFail:pan];

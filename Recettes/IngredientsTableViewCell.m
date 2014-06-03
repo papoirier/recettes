@@ -38,7 +38,7 @@
         // -----------------------------------------------------------------------
         #pragma mark - all the contents of the cell
         cover = [[UIView alloc] initWithFrame:cellRect];
-        cover.backgroundColor = [UIColor greenColor];
+        //cover.backgroundColor = [UIColor greenColor];
         [self addSubview:cover];
         
         // -----------------------------------------------------------------------

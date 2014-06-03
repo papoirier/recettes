@@ -33,12 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 
-    
     [self removeHairlineFromNavigationBar];
-    
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     // NAVIGATION BAR
     
@@ -108,10 +105,16 @@
     NSString * name     = [theIngredient objectForKey:NSLocalizedString(@"ingredient_name", nil)];
     NSString * quantity = [theIngredient objectForKey:NSLocalizedString(@"ingredient_qty", nil)];
     
-    NSLog(@"%ld, %@", (long)indexPath.row, name);
-    
     cell.ingredientNameLabel.text = name;
     cell.ingredientQuantityLabel.text = quantity;
+    
+    // under cover
+    [cell.underCover setBackgroundColor:[UIColor colorWithRed:0 green:1 blue:0 alpha:0]];
+    [cell.underCoverLabel setTextColor:[UIColor colorWithWhite:1 alpha:0]];
+    
+    // cover
+    float cellAlpha = (float)((indexPath.row + 1) * (data.count - 2));
+    [cell.cover setBackgroundColor:[UIColor colorWithRed:0.1 green:0.6 blue:0.2 alpha:cellAlpha/100]];
     
     return cell;
 }
@@ -124,6 +127,29 @@
 {
     return INGREDIENT_CELL_HEIGHT;
 }
+
+// -----------------------------------------------------------------------
+#pragma mark - PANNING GESTURE
+// -----------------------------------------------------------------------
+
+- (BOOL)panHandler:(UIPanGestureRecognizer *)recognizer
+{
+    
+    // BEGAN //
+    
+    
+    // CHANGED //
+    
+    // ENDED //
+    
+    return YES;
+}
+
+
+// -----------------------------------------------------------------------
+#pragma mark - close the cell
+// -----------------------------------------------------------------------
+
 
 
 @end
