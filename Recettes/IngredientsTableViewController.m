@@ -237,7 +237,7 @@
                     [self.tableView moveRowAtIndexPath:pannedIndexPath toIndexPath:destinationIndexPath];
                     [data exchangeObjectAtIndex:pannedIndexPath.row withObjectAtIndex:destinationIndexPath.row];
                     
-                    // [self.tableView reloadData];
+                    //[self.tableView reloadData];
                     //[self saveData];
                 }
                 
