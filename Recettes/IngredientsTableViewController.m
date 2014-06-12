@@ -75,6 +75,18 @@
     [super didReceiveMemoryWarning];
 }
 
+// ---------------------------------------------------
+#pragma mark - MOVING CELLS
+// ---------------------------------------------------
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    NSLog(@"MOVING ROW");
+}
+
 // -----------------------------------------------------------------------
 #pragma mark - SAVE THE DATA
 // -----------------------------------------------------------------------
@@ -234,11 +246,22 @@
                     
                     NSIndexPath * destinationIndexPath = [NSIndexPath indexPathForRow:data.count-1 inSection:0];
                     
+                    [self.tableView beginUpdates];
+                    
+                    NSDictionary * obj = [data objectAtIndex:pannedIndexPath.row];
+                    NSLog(@"Data Moving: %@", obj);
+                    
+                    [data removeObject:obj];
+                    [data addObject:obj];
+                    //[data exchangeObjectAtIndex:pannedIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+                    
                     [self.tableView moveRowAtIndexPath:pannedIndexPath toIndexPath:destinationIndexPath];
-                    [data exchangeObjectAtIndex:pannedIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+                    [self.tableView endUpdates];
                     
                     //[self.tableView reloadData];
                     //[self saveData];
+                    
+                    [self performSelector:@selector(reloadVisibleRowsExceptIndexPath:) withObject:destinationIndexPath afterDelay:0.25];
                 }
                 
            }];
@@ -258,6 +281,11 @@
     return YES;
 }
 
+- (void)reloadVisibleRowsExceptIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray *visibleRows = [[self.tableView indexPathsForVisibleRows] mutableCopy];
+    [visibleRows removeObject:indexPath];
+    [self.tableView reloadRowsAtIndexPaths:visibleRows withRowAnimation:UITableViewRowAnimationNone];
+}
 
 // -----------------------------------------------------------------------
 #pragma mark - close the cell
