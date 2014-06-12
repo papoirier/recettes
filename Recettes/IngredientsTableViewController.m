@@ -147,12 +147,6 @@
 }
 
 // -----------------------------------------------------------------------
-#pragma mark - DATA SAVING STUFF
-// -----------------------------------------------------------------------
-
-
-
-// -----------------------------------------------------------------------
 #pragma mark - PANNING GESTURE
 // -----------------------------------------------------------------------
 
@@ -222,9 +216,8 @@
         
         // open it!
         if ((translation.x > cellOpening * openTrigger) || (percentage > openTrigger && vel.x > 0)) {
-            
 
-            // animation to bring the cell cover's x position back to 0
+        // animation to bring the cell cover's x position back to 0
         [self closeCell:cellRef onComplete:^(void){
                 
                 
@@ -255,7 +248,7 @@
         // close it if it's not opened wide enough
         else {
             originalFrame.origin  = CGPointMake(0, 0);
-            //[self closeCell:cellRef onComplete:nil];
+            [self closeCell:cellRef onComplete:nil];
         }
         
         // we are no longer using cell ref - nil it
@@ -285,6 +278,17 @@
                                     }
                                 }];
 }
+
+
+// -----------------------------------------------------------------------
+#pragma mark - END DISPLAY
+// -----------------------------------------------------------------------
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 
 @end
