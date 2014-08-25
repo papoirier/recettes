@@ -489,6 +489,265 @@
                 ""
             ],
             "source": "http://www.recettes.qc.ca/recette/muffins-aux-courgettes-zucchinis-2963"
-        }
+        },
+            {
+                "title_fr": "Végé-pâté",
+                "title_en": "Veggie loaf",
+                "short_title": "",
+                "author": "People's Potato",
+                "image": "veggie-loaf.png",
+                "prep_time": "15",
+                "total_time": "60",
+                "ingredients": [
+                                {
+                                "name_fr": "Oignon",
+                                "quantity_fr": "1 gros",
+                                "name_en": "Onion",
+                                "quantity_en": "1 large"
+                                },
+                                {
+                                "name_fr": "Ail",
+                                "quantity_fr": "1 gousse",
+                                "name_en": "Garlic",
+                                "quantity_en": "1 clove"
+                                },
+                                {
+                                "name_fr": "Carotte",
+                                "quantity_fr": "1 grosse",
+                                "name_en": "Carrot",
+                                "quantity_en": "1 big"
+                                },
+                                {
+                                "name_fr": "Quinoa",
+                                "quantity_fr": ", cuit",
+                                "name_en": "Quinoa",
+                                "quantity_en": "1 cup, cooked"
+                                },
+                                {
+                                "name_fr": "Graines de tournesol",
+                                "quantity_fr": ", moulues",
+                                "name_en": "Sunflower seeds",
+                                "quantity_en": "½ cup, ground"
+                                },
+                                {
+                                "name_fr": "Avoine instantané",
+                                "quantity_fr": "",
+                                "name_en": "Quick oatmeal",
+                                "quantity_en": "½ cup"
+                                },
+                                {
+                                "name_fr": "Thym",
+                                "quantity_fr": ", séché",
+                                "name_en": "Thyme",
+                                "quantity_en": "¼ tbsp"
+                                },
+                                {
+                                "name_fr": "Sauge",
+                                "quantity_fr": ", séché",
+                                "name_en": "Sage",
+                                "quantity_en": "¼ tbsp"
+                                },
+                                {
+                                "name_fr": "Basilic",
+                                "quantity_fr": ", séché",
+                                "name_en": "Basil",
+                                "quantity_en": "¼ tbsp"
+                                },
+                                {
+                                "name_fr": "Origan",
+                                "quantity_fr": ", séché",
+                                "name_en": "Oregano",
+                                "quantity_en": "¼ tbsp"
+                                },
+                                {
+                                "name_fr": "Romarin",
+                                "quantity_fr": ", séché",
+                                "name_en": "Rosemary",
+                                "quantity_en": "¼ tbsp"
+                                },
+                                {
+                                "name_fr": "Levure nutritive",
+                                "quantity_fr": "",
+                                "name_en": "Nutritional yeast",
+                                "quantity_en": "¼ cup"
+                                },
+                                {
+                                "name_fr": "Huile de canola",
+                                "quantity_fr": "",
+                                "name_en": "Canola oil",
+                                "quantity_en": "¼ cup"
+                                },
+                                {
+                                "name_fr": "Bouillon de légumes",
+                                "quantity_fr": "",
+                                "name_en": "Vegetable stock",
+                                "quantity_en": "½ cup"
+                                },
+                                {
+                                "name_fr": "Sauce soja",
+                                "quantity_fr": "",
+                                "name_en": "Soy sauce",
+                                "quantity_en": "2 tbsp"
+                                },
+                                {
+                                "name_fr": "Poivre",
+                                "quantity_fr": "",
+                                "name_en": "Pepper",
+                                "quantity_en": ""
+                                }
+                            ],
+                "directions_fr": [
+                                  "Préchauffer le four à 185˚C puis huiler un plat de 20 cm x 20 cm.",
+                                  "Dans une casserole de taille moyenne, mener le bouillon de légumes à ébullition.",
+                                  "Mettre tous les légumes dans un petit bol.",
+                                  "Ajouter le quinoa, les lentilles, les graines de tournesol écrasées ainsi que le reste des ingrédients secs au mélange. Bien mélanger.",
+                                  "Ajouter tous les ingrédients liquides. Bien mélanger et piler le tout. Le mélange devrait être mou, humide, avoir un certain corps et ne pas être trop liquide. S'il est trop sec, ajouter un peu de bouillon ou d'eau. S'il est trop liquide, ajouter un peu d'avoine instantanée afin d'absorber l'excès d'humidité.",
+                                  "Compacter le mélange dans le plat huilé.",
+                                  "Cuire pendant 45–60 minutes jusqu'à ce que le mélange soit entièrement cuit. Laisser refroidir avant de trancher."
+                                  ],
+                "directions_en": [
+                                  "Preheat the oven to 350˚F and grease an 8\" x 8\" pan.",
+                                  "In a medium sized pot bring vegetable stock to a simmer.",
+                                  "Put all your veggies in a small bowl.",
+                                  "Add the quinoa, lentils, ground sunflower seeds and all of the remaining dry ingredients to the mix. Mix well.",
+                                  "Add all the liquid ingredients. Mix and mash together well. It should be a soft, moist mixture that holds together and is not runny. If it's too dry, add a bit more stock or water. It it's too runny, add a bit of quick oatmeal to absorb the excess moisture.",
+                                  "Press mixture into the greased pan.",
+                                  "Bake for 45–60 minutes until cooked through. Let it cool down a bit before cutting."
+                                  ],
+                "source": "http://peoplespotato.com"
+                },
+                {
+                "title_fr": "Pétoncles à peine cuites avec compote de tomate",
+                "title_en": "Barely cooked scallops with tomato compote",
+                "short_title": "",
+                "author": "Éric Ripert",
+                "image": "scallops.png",
+                "prep_time": "35",
+                "total_time": "45",
+                "ingredients": [
+                                {
+                                "name_fr": "Tomates",
+                                "quantity_fr": "",
+                                "name_en": "Tomatoes",
+                                "quantity_en": "2 cups"
+                                },
+                                {
+                                "name_fr": "Huile d’olive",
+                                "quantity_fr": "",
+                                "name_en": "Olive oil",
+                                "quantity_en": "2 tbsp"
+                                },
+                                {
+                                "name_fr": "Échalotte",
+                                "quantity_fr": "",
+                                "name_en": "Shallot",
+                                "quantity_en": "½ cup"
+                                },
+                                {
+                                "name_fr": "Ail",
+                                "quantity_fr": ", émincée",
+                                "name_en": "Garlic",
+                                "quantity_en": "1 tsp, minced"
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": "1 tbsp"
+                                },
+                                {
+                                "name_fr": "Sel de mer",
+                                "quantity_fr": "",
+                                "name_en": "Sea salt",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                },
+                                {
+                                "name_fr": "",
+                                "quantity_fr": "",
+                                "name_en": "",
+                                "quantity_en": ""
+                                }
+
+                            ],
+                "directions_fr": [
+                                  "FR"
+                                  ],
+                "directions_en": [
+                                  "ENG"
+                                  ],
+                "source": "http://site.com"
+                }
     ]
 }

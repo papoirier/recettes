@@ -278,7 +278,8 @@
         if(cellRef == nil) {
             NSIndexPath * pannedIndexPath = [self.tableView indexPathForRowAtPoint:touchPoint];
             MainTableViewCell * cell = (MainTableViewCell *)[self.tableView cellForRowAtIndexPath:pannedIndexPath];
-            if(cell) {
+            
+            if (cell) {
                 // set the touch offset
                 offset = touchPoint;
                 offset.x -= cell.cover.frame.origin.x;
@@ -351,18 +352,17 @@
                 if ([self.tableView cellForRowAtIndexPath:pannedIndexPath]) {
                     
                     NSIndexPath * destinationIndexPath = [NSIndexPath indexPathForRow:data.count-1 inSection:0];
+                    [self.tableView beginUpdates];
                     
-                    
+                    NSDictionary * obj = [data objectAtIndex:pannedIndexPath.row];
+                    NSLog(@"Sweet Data Moving");
+                    [data removeObject:obj];
+                    [data addObject:obj];
                     [self.tableView moveRowAtIndexPath:pannedIndexPath toIndexPath:destinationIndexPath];
                     
-                    NSDictionary * draggedData = [data objectAtIndex:pannedIndexPath.row];
-                    [data removeObject:draggedData];
-                    [data insertObject:draggedData atIndex:destinationIndexPath.row];
-                    
-                    [self saveData];
+                    [self.tableView endUpdates];
+                    [self performSelector:@selector(reloadVisibleRowsExceptIndexPath:) withObject:destinationIndexPath afterDelay:0.25];
                 }
-                
-                
             }];
 
         }
@@ -381,6 +381,14 @@
 }
 
 // -----------------------------------------------------------------------
+#pragma mark - reloading the data
+// -----------------------------------------------------------------------
+- (void)reloadVisibleRowsExceptIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView reloadData];
+}
+
+
+// -----------------------------------------------------------------------
 #pragma mark - close the cell
 // -----------------------------------------------------------------------
 - (void)closeCell:(MainTableViewCell *)cell onComplete:(BasicBlock)callback
@@ -397,6 +405,15 @@
                                         callback();
                                     }
                      }];
+}
+
+// -----------------------------------------------------------------------
+#pragma mark - END DISPLAY
+// -----------------------------------------------------------------------
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

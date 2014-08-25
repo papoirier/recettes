@@ -219,7 +219,9 @@
         cellRef.cover.frame = originalFrame;
     }
     
-    // ENDED //
+    // -----------------------------------------------------------------------
+    // ended
+    // -----------------------------------------------------------------------
     if (recognizer.state == UIGestureRecognizerStateEnded && cellRef != nil) {
         __block CGRect originalFrame = cellRef.frame;
         CGPoint translation = [recognizer translationInView:self.tableView];
@@ -245,22 +247,15 @@
                 if ([self.tableView cellForRowAtIndexPath:pannedIndexPath]) {
                     
                     NSIndexPath * destinationIndexPath = [NSIndexPath indexPathForRow:data.count-1 inSection:0];
-                    
                     [self.tableView beginUpdates];
                     
                     NSDictionary * obj = [data objectAtIndex:pannedIndexPath.row];
                     NSLog(@"Data Moving: %@", obj);
-                    
                     [data removeObject:obj];
                     [data addObject:obj];
-                    //[data exchangeObjectAtIndex:pannedIndexPath.row withObjectAtIndex:destinationIndexPath.row];
-                    
                     [self.tableView moveRowAtIndexPath:pannedIndexPath toIndexPath:destinationIndexPath];
+                    
                     [self.tableView endUpdates];
-                    
-                    //[self.tableView reloadData];
-                    //[self saveData];
-                    
                     [self performSelector:@selector(reloadVisibleRowsExceptIndexPath:) withObject:destinationIndexPath afterDelay:0.25];
                 }
                 
